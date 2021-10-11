@@ -25,8 +25,13 @@ medved. Zvrhano zibelko sladkih hrušk mi je prinesel za en sam izdrt trn"."""
 # >>> find_words(test_text, 'de')
 # {'izdere', 'debel', 'oddide', 'začudeno'}
 ###############################################################################
+import re
+def find_words(text, substring):
+    iskan = rf'\w*{substring}\w*'
+    ujemanja = re.findall(iskan, test_text)
+    return set(ujemanja)
 
-
+print(find_words(test_text, 'de'))
 ###############################################################################
 # 2) Sestavite funkcijo [find_prefix], ki vrne množico vseh besed, ki se
 #    pojavijo v nizu in imajo dano predpono.
@@ -34,7 +39,12 @@ medved. Zvrhano zibelko sladkih hrušk mi je prinesel za en sam izdrt trn"."""
 # >>> find_prefix(test_text, 'zi')
 # {'zibala', 'zibel', 'zibelko'}
 ###############################################################################
+def find_prefix(text, substring):
+    iskan = r'\s+' + rf'({substring}\w*)'
+    ujemanja = re.findall(iskan, test_text)
+    return set(ujemanja)
 
+print(find_prefix(test_text, 'zi'))
 
 ###############################################################################
 # 3) Sestavite funkcijo [find_suffix], ki vrne množico vseh besed, ki se
@@ -43,7 +53,13 @@ medved. Zvrhano zibelko sladkih hrušk mi je prinesel za en sam izdrt trn"."""
 # >>> find_suffix(test_text, 'la')
 # {'zibala', 'razveselila', 'prestrašila', 'šivala', 'opazila', 'tla'}
 ###############################################################################
+def find_suffix(text, substring):
+    ### (\w+la)\s
+    iskan = rf'(\w+{substring})\s'
+    ujemanja = re.findall(iskan, test_text)
+    return set(ujemanja)
 
+print(find_suffix(test_text, 'la'))
 
 ###############################################################################
 # 4) Sestavite funkcijo [double_letters], ki sprejme niz in vrne množico vseh
@@ -52,3 +68,10 @@ medved. Zvrhano zibelko sladkih hrušk mi je prinesel za en sam izdrt trn"."""
 # >>> double_letters('A volunteer is worth twenty pressed men.')
 # {'volunteer', 'pressed'}
 ###############################################################################
+#def double_letters(test_text, vzorec):
+def double_letters(text):
+    iskan = r'(\w*(\w)\2\w*)'
+    ujemanja = re.findall(iskan, text)
+    return set(m[0] for m in ujemanja)
+
+print(double_letters('A volunteer is worth twenty pressed men.'))
