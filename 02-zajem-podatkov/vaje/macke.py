@@ -97,7 +97,7 @@ def get_dict_from_ad_block(block):
                         r'\/(?P<naslov>\S*)"'
                         r'.*?<span class="entity-description-itemCaption">Lokacija: </span>(?P<Lokacija>\w*)'
                         r'.*?datetime="(?P<datum>\S*)"'
-                        r'.*?<strong class="price price--hrk">\s*(?P<cena>Cena po dogovoru|\S*)',
+                        r'.*?<strong class="price price--hrk">\s*(?P<cena>Cena po dogovoru|\S*)', ###
                         re.DOTALL)
     data = re.search(sample, block)
     ad_dict = data.groupdict()
