@@ -39,7 +39,7 @@ def vsebina_datoteke(ime_datoteke):
 def zapisi_csv(slovarji, imena_polj, ime_datoteke):
     '''Iz seznama slovarjev ustvari CSV datoteko z glavo.'''
     pripravi_imenik(ime_datoteke)
-    with open(ime_datoteke, 'w', encoding='utf-8') as csv_datoteka:
+    with open(ime_datoteke, 'w', encoding='utf-8', newline='') as csv_datoteka:
         writer = csv.DictWriter(csv_datoteka, fieldnames=imena_polj)
         writer.writeheader()
         for slovar in slovarji:
