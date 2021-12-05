@@ -30,7 +30,7 @@ let middle_of_triple triple =
 [*----------------------------------------------------------------------------*)
 
 let rec starting_element = function
-| [] -> failwith ("Seznam je prekratek")
+| [] -> failwith "Seznam je prekratek"
 | x :: xs -> x
 
 (*----------------------------------------------------------------------------*]
@@ -200,11 +200,11 @@ let rec max_on_components sez1 sez2 =
  - : int = 10
 [*----------------------------------------------------------------------------*)
 
+let rec second_largest sez = 
   let rec maksimalen = 
     function
     | [] -> failwith "Seznam je prazen!"
     | x :: [] -> x
-    | x :: xs -> if x = max x (maksimalen xs) then x else maksimalen xs 
-  
-
-let rec second_largest sez = maksimalen (remove (maksimalen sez) sez)
+    | x :: xs -> if x = max x (maksimalen xs) then x else maksimalen xs
+  in
+  maksimalen (remove (maksimalen sez) sez)
