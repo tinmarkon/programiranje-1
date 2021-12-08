@@ -6,6 +6,9 @@
  poddrevesi. Na tej točki ne predpostavljamo ničesar drugega o obliki dreves.
 [*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*)
 
+type 'a tree = 
+| Empty
+| Node of 'a tree * 'a * 'a tree
 
 (*----------------------------------------------------------------------------*]
  Definirajmo si testni primer za preizkušanje funkcij v nadaljevanju. Testni
@@ -17,9 +20,11 @@
        /   / \
       0   6   11
 [*----------------------------------------------------------------------------*)
+let leaf x = Node (Empty, x, Empty)
 
+let test_tree = Node (Node (leaf 0, 2, Empty), 5, Node (leaf 6, 7, leaf 11))
 
-(*----------------------------------------------------------------------------*]
+(*-------------------------------------)---------------------------------------*]
  Funkcija [mirror] vrne prezrcaljeno drevo. Na primeru [test_tree] torej vrne
           5
          / \
@@ -55,6 +60,9 @@
  Node (Node (Empty, true, Empty), true, Node (Empty, true, Empty)))
 [*----------------------------------------------------------------------------*)
 
+let rec map_tree f = function
+| Empty -> Empty
+| Node (l, x, r) -> Node (map_tree f l, f x, map_tree f r)
 
 (*----------------------------------------------------------------------------*]
  Funkcija [list_of_tree] pretvori drevo v seznam. Vrstni red podatkov v seznamu
@@ -63,6 +71,10 @@
  # list_of_tree test_tree;;
  - : int list = [0; 2; 5; 6; 7; 11]
 [*----------------------------------------------------------------------------*)
+
+let rec list_of_tree = function
+| Empty -> []
+| Node (l, x, r) -> list_of_tree l @ [x] @ list_of_tree r
 
 
 (*----------------------------------------------------------------------------*]
@@ -75,6 +87,12 @@
  # test_tree |> mirror |> is_bst;;
  - : bool = false
 [*----------------------------------------------------------------------------*)
+ 
+let rec is_bst tree =
+     let rec order_list = function
+     | [] | _ :: [] -> true
+     | x :: y :: xs -> if x <= y then order_list (y :: xs) else false
+in tree |> list_of_tree |> order_list
 
 
 (*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*]
@@ -90,15 +108,29 @@
  # member 3 test_tree;;
  - : bool = false
 [*----------------------------------------------------------------------------*)
+let rec insert element = function
+| Empty -> leaf element
+| Node(l, x, r) when element < x -> Node (insert element l, x, r)
+| Node(l, x, r) when element = x -> Node (l, x, r)
+| Node(l, x, r) -> Node (l, x, insert element r)
+
+let rec member element = function
+| Empty -> false
+| Node (l, x, r) when element = x -> true
+| Node (l, x, r) when element < x -> member element l
+| Node (l, x, r) -> member element r
 
 
 (*----------------------------------------------------------------------------*]
  Funkcija [member2] ne privzame, da je drevo bst.
  
- Opomba: Premislte kolikšna je časovna zahtevnost funkcije [member] in kolikšna
+ Opomba: Premislte kolikšna  je časovna zahtevnost funkcije [member] in kolikšna
  funkcije [member2] na drevesu z n vozlišči, ki ima globino log(n). 
 [*----------------------------------------------------------------------------*)
 
+let rec member2 element = function
+| Empty -> false
+| Node (l, x, r) -> element = x || member2 element l || member2 element r
 
 (*----------------------------------------------------------------------------*]
  Funkcija [succ] vrne naslednjika korena danega drevesa, če obstaja. Za drevo
@@ -112,7 +144,27 @@
  # pred (Node(Empty, 5, leaf 7));;
  - : int option = None
 [*----------------------------------------------------------------------------*)
+let rec succ tree = 
+     let rec minimalni = function
+     | Empty -> None
+     | Node (_, x, Empty) -> Some x
+     | Node (l, _, _) -> minimalni l
+in match tree with
+| Empty -> None
+| Node (_, _, r) -> minimalni r
 
+let pred tree = 
+     let rec maksimalni = function
+     | Empty -> None
+     | Node (_, x, Empty) -> Some x
+     | Node (_, _, r) -> maksimalni r
+in
+match tree with
+| Empty -> None
+| Node(l, _, _) -> maksimalni l
+
+
+     
 
 (*----------------------------------------------------------------------------*]
  Na predavanjih ste omenili dva načina brisanja elementov iz drevesa. Prvi 
@@ -126,6 +178,10 @@
  Node (Node (Node (Empty, 0, Empty), 2, Empty), 5,
  Node (Node (Empty, 6, Empty), 11, Empty))
 [*----------------------------------------------------------------------------*)
+let delete element = function
+| Empty -> None
+| Node (l, x, r) when element > x -> Node (l, x, delete element r)
+| Node (l, x, r) when element < x -> Node (delete element l, x, r)
 
 
 (*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*]
@@ -139,6 +195,7 @@
  vrednosti, ga parametriziramo kot [('key, 'value) dict].
 [*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*)
 
+type ('key, 'value) dict = ('key * 'value) tree
 
 (*----------------------------------------------------------------------------*]
  Napišite testni primer [test_dict]:
@@ -148,7 +205,8 @@
          /
      "c":-2
 [*----------------------------------------------------------------------------*)
-
+let test_dict: (string, int) dict = 
+Node(leaf ("a", 0), ("b", 1), Node(leaf("c", -2), ("d", 2), Empty))
 
 (*----------------------------------------------------------------------------*]
  Funkcija [dict_get key dict] v slovarju poišče vrednost z ključem [key]. Ker
@@ -159,7 +217,9 @@
  # dict_get "c" test_dict;;
  - : int option = Some (-2)
 [*----------------------------------------------------------------------------*)
-
+let rec dict_get key dict =
+     | Empty -> None
+     | Node (l, (kljuc, vrednost), r) -> if key = kljuc then Some vrednost else if key < kljuc then dict_get key l else dict_get key r
       
 (*----------------------------------------------------------------------------*]
  Funkcija [print_dict] sprejme slovar s ključi tipa [string] in vrednostmi tipa

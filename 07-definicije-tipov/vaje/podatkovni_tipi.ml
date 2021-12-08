@@ -182,8 +182,17 @@ let update counter = function
  - : magic_counter = {fire = 3; frost = 0; arcane = 0}
 [*----------------------------------------------------------------------------*)
 
-let rec count_magic = function
-| 
+let count_magic lst =
+	let rec aux_count acc = function
+	| [] -> acc
+	| {name; status} :: wizzards ->
+		match status with
+		| Newbie -> aux_count acc wizzards
+		| Student (magic, _) -> aux_count (update acc magic) wizzards
+		| Employed (magic, _) -> aux_count (update acc magic) wizzards
+	in aux_count {fire = 0; frost = 0; arcane = 0} lst
+
+
 
 (*----------------------------------------------------------------------------*]
  Želimo poiskati primernega kandidata za delovni razpis. Študent lahko postane
@@ -199,4 +208,17 @@ let rec count_magic = function
  - : string option = Some "Jaina"
 [*----------------------------------------------------------------------------*)
 
-let rec find_candidate = ()
+let rec find_candidate magic specialisation wizzard_list = 
+ let year = 
+	match specialisation with
+	| Historian -> 3
+	| Researcher -> 4
+	| Teacher -> 5
+ in
+let rec find = function
+| [] -> None
+| {name; status} :: wizzards -> 
+	match status with
+	| Student (spec, years) when magic = spec && years >= year -> Some name
+	| _ -> find wizzards
+in find wizzard_list

@@ -20,8 +20,7 @@
 
  Namig: Najlažje je, da igralca poimenujete kar glede na simbol.
 [*----------------------------------------------------------------------------*)
-
-type player = unit  (* DOPOLNI ME *)
+type player = X | O 
 
 (*----------------------------------------------------------------------------*]
  Igralno mrežo predstavimo s trojico vrstic, kjer je vsaka vrstica trojica polj.
@@ -32,14 +31,14 @@ type player = unit  (* DOPOLNI ME *)
 
  Namig: Vaša koda bo lepša, če definirate še dodatne tipe.
 [*----------------------------------------------------------------------------*)
-
-type grid = unit  (* DOPOLNI ME *)
-
+type field = None | Some of player
+type vrstica = field * field * field
+type grid = vrstica * vrstica * vrstica
 (*----------------------------------------------------------------------------*]
  Definirajte vrednost, ki predstavlja prazno mrežo.  
 [*----------------------------------------------------------------------------*)
 
-let empty_grid : grid = () (* DOPOLNI ME *)
+let empty_grid : grid = ((None, None, None), (None, None, None), (None, None, None))
 
 (*----------------------------------------------------------------------------*]
  Ker je mreža fiksne velikosti 3x3 lahko definiramo poseben tip za številčenje.
@@ -57,9 +56,17 @@ type index = Zero | One | Two
  trojico, ki ima primerno polje posodobljeno na podano vrednost.
 [*----------------------------------------------------------------------------*)
 
-let get_index index (x0, x1, x2) = failwith "DOPOLNI ME"
+let get_index index (x0, x1, x2) = 
+  match index with
+  | Zero -> x0
+  | One -> x1
+  | Two -> x2
 
-let set_index index x (x0, x1, x2) = failwith "DOPOLNI ME"
+let set_index index x (x0, x1, x2) = 
+  match index with
+  | Zero -> (x, x1, x2)
+  | One -> (x0, x, x2)
+  | Two -> (x0, x1, x)
 
 (*----------------------------------------------------------------------------*]
  Funkcija [get_field] vrne vrednost polja v mreži, ki ga določata podana
