@@ -60,7 +60,7 @@ let get_column (grid : 'a grid) (col_ind : int) =
 let columns grid = List.init 9 (get_column grid)
 
 let get_box (grid : 'a grid) (box_ind : int) = 
-  Array.init 9 (fun element -> grid.((box_ind / 3) + element).((box_ind mod 3) + element))
+  Array.init 9 (fun element -> grid.((box_ind / 3) + element / 3).((box_ind mod 3) + element / 3))
 
 let boxes grid = List.init 9 (get_box grid)
 
@@ -124,10 +124,11 @@ let problem_of_string str =
 
 type solution = int grid
 
-let print_solution solution = print_grid (string_of_cell) solution
+let print_solution solution = print_grid (string_of_int) solution
 
 (*Funkcija sprejme rešen sudoku in pogleda da je vsota točna*)
 let valid_sudoku_sum (grid : solution) : bool = grid |> Array.to_list |> List.map (Array.fold_left (+) 0) |> List.fold_left (+) 0 = 450
+
 
 (*Funkcija ki sprejema seznam in pogleda če so v njem kakšne podvojene vrednosti*)
 let rec duplicates = function
@@ -148,7 +149,6 @@ let valid_seq (list : 'a list) : bool =
 
 (*Funckija sprejme seznam arrayjev in za vsak array pogleda ali obstajajo duplikati. Če jih ni v nobenem vrne true*)
 let valid_boxes list = list |> List.map (Array.to_list) |> List.map duplicates |> List.for_all ((=) false) 
-
 
 
 (*Funkcija sprejema grid in vrne seznam seznamov. Funkcijo sem napisal, ker v tej verziji Array.combine še ne obstaja*)
@@ -172,7 +172,7 @@ let solution_from_problem (problem : problem) (solution : solution) : bool =
     | (None, y) :: xs -> checking_tuples xs
   in checking_tuples (combine_and_flat lst1 lst2) 
     
-(*VSAK N-TI ELEMENT PO VRSTICAH JE N-TI STOLPEC !!! NERABIŠ TOLIKO DELA*)
+(*VSAK N-TI ELEMENT PO VRSTICAH JE N-TI STOLPEC !!! NEBODI BUTAST*)
 
 (*Funckija sprejme začetni problem in rešitev, ter pogleda vse potrebne/zadostne pogoje*)
 
