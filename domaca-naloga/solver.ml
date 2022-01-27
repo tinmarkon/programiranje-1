@@ -1,8 +1,14 @@
+
 type available = { loc : int * int; possible : int list }
 
 (* TODO: tip stanja ustrezno popravite, saj boste med reševanjem zaradi učinkovitosti
    želeli imeti še kakšno dodatno informacijo *)
 type state = { problem : Model.problem; current_grid : int option Model.grid }
+
+let available_slots (state : state) : int * int list =
+   let state_list = Model. state.current_grid in
+
+
 
 let print_state (state : state) : unit =
   Model.print_grid
