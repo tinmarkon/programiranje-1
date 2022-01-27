@@ -32,8 +32,8 @@ type player = X | O
  Namig: Vaša koda bo lepša, če definirate še dodatne tipe.
 [*----------------------------------------------------------------------------*)
 type field = None | Some of player
-type vrstica = field * field * field
-type grid = vrstica * vrstica * vrstica
+type row = field * field * field
+type grid = row * row * row
 (*----------------------------------------------------------------------------*]
  Definirajte vrednost, ki predstavlja prazno mrežo.  
 [*----------------------------------------------------------------------------*)
@@ -92,7 +92,8 @@ let set_field (row_i : index) (col_i : index) x grid =
  funkcija [is_full_grid] pa preveri zapolnjenost mreže.
 [*----------------------------------------------------------------------------*)
 
-let is_full_row row = failwith "DOPOLNI ME"
+let is_full_row row = 
+  if row = (Some X, Some O  Some X)
 
 let is_full_grid grid =
     let (r1, r2, r3) = grid in
