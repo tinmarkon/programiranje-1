@@ -23,9 +23,11 @@ let possible_int (state : state) ((row, column) : int * int) : int list=
 
 let insert_int (state : state) ((row, column) : int * int) (num : int) : state =
   state.current_grid.(row).(column) <- Some num;
+  Model.print_grid Model.string_of_cell state.current_grid;
   { problem = state.problem; current_grid = state.current_grid; no_future_grid_list = state.no_future_grid_list}
 
-let insert_no_future (state : state)
+let insert_no_future (state : state) grid =
+  {problem = state.problem; current_grid = state.current_grid; no_future_grid_list = grid :: state.no_future_grid_list }
 
 let print_state (state : state) : unit =
   Model.print_grid
@@ -53,16 +55,13 @@ let validate_state (state : state) : response =
      v prvem predpostavi, da hipoteza velja, v drugem pa ravno obratno.
      Če bo vaš algoritem najprej poizkusil prvo možnost, vam morda pri drugi
      za začetek ni treba zapravljati preveč časa, saj ne bo nujno prišla v poštev. *)
-let branch_state (state : state) : (state * state) option =
+let branch_state (state : state) =
   match available_slots state with
   | [] -> None
-  | x :: xs -> let trying_int = List.hd (possible_int state x) in Some ()
-
+  | (x,y) :: xs -> Some (insert_int state (x, y) (List.hd (possible_int state (x, y))), state)
  
 
-
-  
-
+ 
 (* pogledamo, če trenutno stanje vodi do rešitve *)
 let rec solve_state (state : state) =
   (* uveljavimo trenutne omejitve in pogledamo, kam smo prišli *)
