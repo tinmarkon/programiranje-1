@@ -1,0 +1,785 @@
+*   [33mf812e5e[m[33m ([m[1;36mHEAD -> [m[1;32mtemp[m[33m)[m Merge remote-tracking branch 'upstream/master' into HEAD
+[31m|[m[32m\[m  
+[31m|[m * [33mcab5a1a[m[33m ([m[1;31mupstream/master[m[33m)[m Popravil skripto za štopanje
+[31m|[m *   [33m10ae8fe[m Merge pull request #25 from L3435/testni_primeri
+[31m|[m [33m|[m[34m\[m  
+[31m|[m [33m|[m * [33m63534b1[m Dodane rešitve nekaterih testnih primerov
+[31m|[m [33m|[m * [33mc377cc6[m Dodani testni primeri
+[31m|[m [33m|[m[33m/[m  
+[31m|[m * [33ma253d9a[m Popravek imena datoteke
+[31m|[m * [33m7541c34[m Dodal skripto za ocenjevanje nalog
+[31m|[m * [33m13667b2[m Dodal rešitve sudokujev
+[31m|[m * [33m1f182b1[m Popravil navodila za domačo nalogo
+[31m|[m * [33m2f9e158[m Datoteke s predavanj
+[31m|[m * [33m6ba581a[m Popravljen sudoku s termometri
+[31m|[m * [33m24b455d[m Razbil poglavje o memoizaciji
+[31m|[m * [33m2508a89[m Datoteke s predavanj
+[31m|[m * [33m4b281b1[m Popravljene puscice
+[31m|[m * [33mcc72e2b[m Dodaj \n na konec 1. datoteke v vsaki seriji testov
+[31m|[m * [33m6e929ef[m Popravi manjše napake v navodilih
+[31m|[m * [33mea47a68[m Posodobil navodila za domačo nalogo
+[31m|[m * [33m76701a8[m Datoteke s predavanj
+[31m|[m * [33m632d654[m Popravljena navodila
+[31m|[m * [33m0c3338b[m razsiritve
+[31m|[m * [33m4e8c9b4[m Datoteke s predavanj
+[31m|[m * [33me12c6ee[m Datoteke s predavanj
+* [34m|[m [33mc5e2d7d[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/Resitve[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m Vse kar je po steagano
+* [34m|[m   [33m3fe6db9[m Merge remote-tracking branch 'upstream/master'
+[35m|[m[34m\[m [34m\[m  
+[35m|[m [34m|[m[34m/[m  
+[35m|[m * [33m02821dc[m Datoteke s predavanj
+[35m|[m * [33me7b8b3a[m Domaca naloga
+[35m|[m * [33m0ea0543[m Popravil gitignore
+[35m|[m * [33m0a34ba8[m Datoteke s predavanj
+[35m|[m * [33m9b44544[m Datoteke s predavanj
+[35m|[m * [33m9cce40f[m Popravki nalog
+[35m|[m * [33m21a856b[m Gradiva s predavanj
+[35m|[m * [33m82d6e2b[m Gradiva s predavanj
+[35m|[m * [33m0f61df3[m Datoteke s predavanj
+[35m|[m * [33ma0e4f6d[m Gradiva s predavanj
+[35m|[m * [33macaa7b3[m Gradiva s predavanj
+* [36m|[m [33md566f12[m Zadnji commiti
+* [36m|[m [33m9475239[m[33m ([m[1;31morigin/test[m[33m, [m[1;32mproblem_zdruzevanja[m[33m, [m[1;32mmatijapretnar-master[m[33m)[m Spremenil zapis csvja, drugače mi dela prazno vrstico med zapisi
+* [36m|[m [33m56677b3[m Izbrisane ne potrebne datoteke
+* [36m|[m [33m82845e6[m Dodal in popravil se naloge iz prvih vaj ocamla
+* [36m|[m [33mfa1d80f[m Spremembe zaradi poganjanja programa
+* [36m|[m [33m715920e[m Dodane 3. vaje
+* [36m|[m [33mab72220[m Dodajanje in odstranjevanje datotek
+* [36m|[m [33m65dfea4[m Spremenenjen vzorec pri cenah
+* [36m|[m [33m27293ce[m Zakljucen 2 razdelek brez dodatka--stageam vse
+* [36m|[m   [33m6380f5a[m Merge branch 'matijapretnar:master' into master
+[1;31m|[m[36m\[m [36m\[m  
+[1;31m|[m [36m|[m[36m/[m  
+[1;31m|[m * [33ma78f0b8[m Datoteke s predavanj
+[1;31m|[m * [33mda8f498[m Posodobil na zadnjo verzijo IMDBja
+[1;31m|[m * [33mae051a0[m Popravljena napačna definicija operatorja '+'
+[1;31m|[m * [33mfb7e9d5[m Popravil navodila izpitov
+[1;31m|[m * [33m854e161[m[33m ([m[1;33mtag: 2020-21[m[33m)[m Fibonaccijeva drevesa
+[1;31m|[m * [33m9b6dbe8[m Dopolnitve zapiskov
+[1;31m|[m * [33md68deb0[m Pobrisal še zadnje prosojnice
+[1;31m|[m *   [33md15eba8[m Merge commit 'd20e0'
+[1;31m|[m [1;33m|[m[1;34m\[m  
+[1;31m|[m [1;33m|[m * [33md20e0b1[m Popravki izpita
+[1;31m|[m [1;33m|[m * [33mb241312[m Osnova 3. izpita
+[1;31m|[m [1;33m|[m * [33mca775ea[m Popravil 4 v 10
+[1;31m|[m [1;33m|[m * [33m95a29e1[m Popravki izpita
+[1;31m|[m [1;33m|[m * [33m48c5a84[m Dodal detaile v 1.c)
+[1;31m|[m [1;33m|[m * [33mc56b085[m dodal izpit za 9.2.
+[1;31m|[m * [1;34m|[m [33mae3180b[m popravek napake (#17)
+[1;31m|[m [1;34m|[m[1;34m/[m  
+[1;31m|[m *   [33me905fe3[m Merge branch 'master' into izpiti
+[1;31m|[m [1;35m|[m[1;36m\[m  
+[1;31m|[m [1;35m|[m * [33ma188b12[m Dodal izpit
+[1;31m|[m [1;35m|[m * [33mbfe9fcd[m popravil napako (#15)
+[1;31m|[m [1;35m|[m * [33mdb87931[m Popravki zapiskov
+[1;31m|[m [1;35m|[m * [33m48e676f[m Popravki
+[1;31m|[m [1;35m|[m * [33m67d6dfa[m Pobrisal stare prosojnice
+[1;31m|[m [1;35m|[m * [33m94d7bca[m Iskalna drevesa
+[1;31m|[m [1;35m|[m * [33m5ea6de0[m Manjkajoča poglavja
+[1;31m|[m [1;35m|[m * [33m6c22d76[m Datoteke s predavanj
+[1;31m|[m [1;35m|[m * [33mbbbaffa[m Zapiski iz memoizacije
+[1;31m|[m [1;35m|[m * [33m543840f[m Datoteke s predavanj
+[1;31m|[m [1;35m|[m * [33mfbbe541[m Izklopil avtomatičen deploy zapiskov
+[1;31m|[m [1;35m|[m * [33mfa56969[m Zapiski iz dinamičnega programiranja
+[1;31m|[m [1;35m|[m * [33m0844fc6[m Prenesel zapiske za učinke in čistost
+[1;31m|[m [1;35m|[m * [33mf599f05[m Zapiske sestavi v dockerju
+[1;31m|[m [1;35m|[m * [33m692acdb[m Dodal nekaj zapiskov
+[1;31m|[m [1;35m|[m * [33m52d2299[m Estetski popravki v tekstu nalog
+[1;31m|[m [1;35m|[m * [33m971580c[m Popravil dinamično programiranje
+[1;31m|[m [1;35m|[m * [33m2f9b072[m Posodobil vaje za din-programiranje v pythonu
+[1;31m|[m [1;35m|[m * [33m8b5ce26[m Namestil jupyter notebook za OCaml
+[1;31m|[m [1;35m|[m * [33m50cbf73[m Fiksiral verzijo jupytext da se knjiga objavi
+[1;31m|[m [1;35m|[m * [33m6af0887[m Fixed indices
+[1;31m|[m [1;35m|[m * [33m6c9fa40[m Počistil navodila za vaje pri deli in vladaj
+[1;31m|[m [1;35m|[m * [33m5772618[m Popravil build jupyterbooka
+[1;31m|[m [1;35m|[m * [33m1469a08[m Popravi Docker container build (#14)
+[1;31m|[m [1;35m|[m * [33m2ebd7f1[m Datoteke s predavanj
+[1;31m|[m [1;35m|[m * [33m1da4b90[m Datoteke s predavanj
+[1;31m|[m [1;35m|[m * [33m66afe6b[m Datoteke s predavanj
+[1;31m|[m [1;35m|[m * [33md94bbc0[m Datoteke s predavanj
+[1;31m|[m [1;35m|[m * [33mff7ad1d[m Datoteke s predavanj
+[1;31m|[m [1;35m|[m * [33m31955f0[m Dodane vaje 8 z igro krizci in krozci
+[1;31m|[m [1;35m|[m * [33m59fdef5[m Datoteke s predavanj
+[1;31m|[m [1;35m|[m * [33ma8d9108[m Funkcijsko programiranje -> Funkcije
+[1;31m|[m [1;35m|[m * [33maf4c3ae[m Posodobil ocaml razširitev
+[1;31m|[m [1;35m|[m * [33mdc12fa0[m Ignoriraj virtual okolja in node
+[1;31m|[m [1;35m|[m * [33mcfae3c7[m Datoteke s predavanj
+[1;31m|[m [1;35m|[m * [33mab33ecd[m Datoteke s predavanj
+[1;31m|[m [1;35m|[m * [33m742481b[m Datoteke s predavanj
+[1;31m|[m [1;35m|[m * [33mc57c33a[m Datoteke s predavanj
+[1;31m|[m [1;35m|[m * [33m73ddc01[m Datoteka s predavanj
+[1;31m|[m [1;35m|[m * [33m17908d0[m Dodal pandase za GitHub pages
+[1;31m|[m [1;35m|[m * [33m2a4f51b[m Počistil skripte za branje podatkov
+[1;31m|[m [1;35m|[m * [33mb59a59e[m Analiza podatkov -> Knjižnica Pandas
+[1;31m|[m [1;35m|[m * [33m098d6b0[m Modularnost zamenjal z Bayesovim klasifikatorjem
+[1;31m|[m [1;35m|[m * [33m07e5172[m Posodobil navodilo za macke.py
+[1;31m|[m [1;35m|[m * [33m6a15163[m Datoteke s predavanj
+[1;31m|[m [1;35m|[m * [33m7b63299[m dodal vzorca \b in \B, ter odstranil podvojeno vrstico metode findall (#10)
+[1;31m|[m [1;35m|[m * [33m7e04e5b[m Posodobil podatke o filmih za letošnje leto
+[1;31m|[m [1;35m|[m * [33mbee8df2[m Container comments
+[1;31m|[m * [1;36m|[m [33mfef93f0[m Dodal izpit za 20.1.
+* [1;36m|[m [1;36m|[m [33m5f9e265[m Dodane moje rešitve iz vaj
+[1;36m|[m [1;36m|[m[1;36m/[m  
+[1;36m|[m[1;36m/[m[1;36m|[m   
+* [1;36m|[m [33m681069d[m Popravil povezave do prosojnic
+* [1;36m|[m [33m40e5bcd[m Popravil naslov v readme
+* [1;36m|[m [33m09e9ffa[m Install extensions
+* [1;36m|[m [33m6111bad[m Branje podatkov s knjižnico BS4
+* [1;36m|[m [33m47ce67d[m Popravil vzorec za leto filma
+* [1;36m|[m [33m8436112[m Dopolnil zapiske o regularnih izrazih
+* [1;36m|[m [33m052d7f7[m Posodobil docker nastavitve
+* [1;36m|[m [33mba59197[m Zapiski o regularnih izrazih
+* [1;36m|[m [33m599232e[m Dodal zapiske
+* [1;36m|[m [33m4a399ee[m[33m ([m[1;33mtag: 2019-20[m[33m)[m Počistil odvečne datoteke
+[1;36m|[m[1;36m/[m  
+*   [33m74baccb[m Merge branch 'izpiti'
+[31m|[m[32m\[m  
+[31m|[m * [33m9e72326[m Popravki skice in teksta.
+[31m|[m * [33m360eb81[m Dodal rešitve druge naloge.
+[31m|[m * [33m5ec77ce[m Resolve merge conflicts.
+[31m|[m * [33mda43591[m Naloga iz sodih permutacij
+[31m|[m * [33m172e7a9[m Ideje za prvo nalogo.
+[31m|[m * [33m580179a[m Fix solutions
+[31m|[m * [33mc2560ed[m Final changes
+[31m|[m * [33m912638b[m Anjini popravki
+[31m|[m * [33m55c5b1c[m Popravki
+[31m|[m * [33mcd660fa[m Remove redundant examples
+[31m|[m * [33m8054c7b[m Prettify text of exam
+[31m|[m * [33mfc3de97[m Draft second exam text
+[31m|[m * [33ma5c394f[m Add exercises for second exam
+[31m|[m * [33mebca437[m Start work on second exam
+[31m|[m * [33m9cf5563[m Added flowers to the pots
+[31m|[m * [33m5be7b3c[m Olepšava teksta
+[31m|[m * [33mee3c29c[m solution cleanup
+[31m|[m * [33m17b3f3c[m Draft exam
+[31m|[m *   [33m2fb6c73[m Merge branch 'izpiti' of git.fmf.uni-lj.si:matijapretnar/programiranje-1 into izpiti
+[31m|[m [33m|[m[34m\[m  
+[31m|[m [33m|[m * [33m8599440[m Mini popravki
+[31m|[m [33m|[m * [33m08ad413[m Small corrections
+[31m|[m [33m|[m * [33mc60b211[m Popravki kolokvija
+[31m|[m * [34m|[m [33m164ce39[m Draft exam
+[31m|[m [34m|[m[34m/[m  
+[31m|[m * [33md2483f6[m Added files for the midterm
+* [34m|[m [33m45106cd[m Dodal docker remote container
+* [34m|[m [33m5af7e76[m Dodal presledek
+* [34m|[m [33m669cfa6[m Dodal README.md
+* [34m|[m [33md0c124b[m Datoteke s predavanj
+* [34m|[m [33m54c09e1[m Popravki prosojnic
+* [34m|[m [33m8e2b5b5[m Implementacija strožjih množic
+* [34m|[m [33m33fd897[m Manjša pisava za kodo
+* [34m|[m [33m76a5b4d[m Datoteke z moduli
+* [34m|[m [33m87c82a9[m Števila različnih na različne načine
+* [34m|[m [33md1c7858[m Datoteke s predavanj o urejanju
+* [34m|[m [33m26419f2[m Prosojnice za memoizacijo
+* [34m|[m [33m3ab6ef7[m Prosojnice in datoteke s predavanj
+* [34m|[m [33m0811b1b[m Ogrodje programa za krčenje slik po šivih
+* [34m|[m [33me055f55[m Added missing argument
+* [34m|[m [33mbc7b7ce[m Mergesort needs indices
+* [34m|[m [33m4c58d37[m Fixes
+* [34m|[m [33m3b09b7a[m Lepotni popravki
+* [34m|[m [33me563be2[m Additional exercises
+* [34m|[m [33mc14f2d2[m Datoteke s predavanj
+* [34m|[m [33m4db0537[m Popravljen Fisher-Yates
+* [34m|[m [33m18871e7[m Popravki datotek za iskalna drevesa
+* [34m|[m [33m85d1356[m Create kolokvij-2019-11-18.ml
+* [34m|[m [33mb247023[m Popravki datotek s predavanj
+* [34m|[m [33m1275fb6[m Pobrisal zastarele vaje
+* [34m|[m [33mb5d1453[m Popravki in datoteke s predavanj
+* [34m|[m [33mf5ad26a[m Removed types and commented assert
+* [34m|[m [33m25bf4e6[m Translated documentation comments, added explicit types and explicit main method
+* [34m|[m [33m05cfc55[m Skripte s predavanj
+* [34m|[m [33ma8fe26f[m Fixed tasks.json to work on multiple operating systems
+* [34m|[m [33m3e75a86[m Added tasks.json
+* [34m|[m [33m8e0a76d[m Datoteke s predavanj o regularnih izrazih
+* [34m|[m [33mca56795[m Izboljšal predstavitev vlog
+* [34m|[m [33m4b91e4f[m Small fixes to new exercises.
+* [34m|[m [33m891439e[m Improve early OCaml exercises
+* [34m|[m [33m8c58511[m Pobrisal vse povezave iz opisov filmov
+* [34m|[m [33m420af24[m Change order of exercises
+[34m|[m[34m/[m  
+* [33m8bf58f9[m Datoteka za ustni izpit
+* [33m5cd5e33[m Uredil datoteke z zajetimi in obdelanimi podatki
+*   [33m1ae098f[m Merge remote-tracking branch 'origin/master'
+[35m|[m[36m\[m  
+[35m|[m *   [33m58142ad[m Merge pull request #9 from ajdalemut/patch-1
+[35m|[m [1;31m|[m[1;32m\[m  
+[35m|[m [1;31m|[m * [33m75c6f84[m Tiskarska napaka
+[35m|[m [1;31m|[m[1;31m/[m  
+* [1;31m|[m [33mb867049[m Revert "Pobrisal angleške datoteke"
+* [1;31m|[m [33mc40dc2f[m Uredil datoteke z izpiti
+* [1;31m|[m [33m5c0e8cb[m Pobrisal rešitve izpitov
+* [1;31m|[m [33mb4b20e9[m Pobrisal stare datoteke
+* [1;31m|[m [33m9876c23[m Pobrisal angleške datoteke
+* [1;31m|[m [33ma7b4080[m Mape poimenoval po abecedi
+* [1;31m|[m   [33m90ec4c9[m[33m ([m[1;33mtag: 2018-19[m[33m)[m Merge branch 'exams'
+[1;33m|[m[1;34m\[m [1;31m\[m  
+[1;33m|[m * [1;31m|[m [33m55110d5[m Rename izpiti/2019-08-27/{wide_lists.ml -> nested_lists.ml}
+[1;33m|[m * [1;31m|[m [33m43f5229[m Fix recursion in `alternirajoci_konstruktorji`
+[1;33m|[m * [1;31m|[m [33me45ad3d[m (hopefully) final corrections of exam
+[1;33m|[m * [1;31m|[m [33mab6b0e6[m Add exam for 27.8.2019
+[1;33m|[m * [1;31m|[m [33m83311c4[m Add translated version
+[1;33m|[m * [1;31m|[m [33ma9a497e[m More explicit instructions for the plots
+[1;33m|[m * [1;31m|[m [33mf858a20[m Add exam for 2019-06-27
+[1;33m|[m * [1;31m|[m   [33m8f5ff30[m Merge branch 'exams' of git.fmf.uni-lj.si:philipp.haselwarter/programiranje-1 into exams
+[1;33m|[m [1;35m|[m[1;36m\[m [1;31m\[m  
+[1;33m|[m [1;35m|[m * [1;31m|[m [33m25bb26b[m Add an OCaml solution for the grenouille
+[1;33m|[m * [1;36m|[m [1;31m|[m [33m33f83c9[m Add memoization to the frog and tell them on what input to test
+[1;33m|[m [1;36m|[m[1;36m/[m [1;31m/[m  
+[1;33m|[m * [1;31m|[m [33mbb16a8e[m Light corrections
+[1;33m|[m * [1;31m|[m [33md36fd28[m Add tex and refine exercises.
+[1;33m|[m * [1;31m|[m [33m1577f95[m Add suggestions
+[1;33m|[m * [1;31m|[m   [33m1e992f4[m Merge branch 'master' into exams
+[1;33m|[m [31m|[m[32m\[m [1;31m\[m  
+[1;33m|[m * [32m|[m [1;31m|[m [33mfee4971[m delete a duplicate file
+[1;33m|[m * [32m|[m [1;31m|[m [33ma2c78d1[m Add slovene version and template file for students.
+[1;33m|[m * [32m|[m [1;31m|[m [33m7d8cd3e[m Adjustments according to Anja's suggestions
+[1;33m|[m * [32m|[m [1;31m|[m [33m0d917c2[m Re-order flyers
+[1;33m|[m * [32m|[m [1;31m|[m [33m907cc05[m Diversify names
+[1;33m|[m * [32m|[m [1;31m|[m [33m4460b61[m Mini midterm 2018
+* [32m|[m [32m|[m [1;31m|[m [33m2d1c48b[m PDF datoteka 2. izpita
+[1;31m|[m [32m|[m[1;31m_[m[32m|[m[1;31m/[m  
+[1;31m|[m[1;31m/[m[32m|[m [32m|[m   
+* [32m|[m [32m|[m [33m00f689d[m Simplify exercise
+* [32m|[m [32m|[m   [33m83bd5e4[m Merge branch 'master' of https://github.com/matijapretnar/programiranje-1
+[33m|[m[32m\[m [32m\[m [32m\[m  
+[33m|[m [32m|[m [32m|[m[32m/[m  
+[33m|[m [32m|[m[32m/[m[32m|[m   
+[33m|[m * [32m|[m [33m59679cf[m Posodobil dodatne vaje.
+* [34m|[m [32m|[m [33m4da1aa0[m Add memoization exercise to dream dollars
+[34m|[m[34m/[m [32m/[m  
+* [32m|[m [33mdd2c18c[m Popravek mape
+* [32m|[m [33m2868e03[m Datoteke s predavanj
+* [32m|[m [33m20c2499[m Predavanja iz memoizacije
+* [32m|[m [33mc897eaa[m Add more exercises for dynamic programming.
+* [32m|[m [33m37dc769[m Dinamično programiranje
+* [32m|[m [33m3a5b3f1[m Gradiva s predavanj
+* [32m|[m [33ma65fc5a[m Datoteke s predavanj
+* [32m|[m [33mc3ca42c[m Prosojnice za spremenljive podatkovne strukture
+* [32m|[m   [33m67acf29[m Merge branch 'master'
+[35m|[m[36m\[m [32m\[m  
+[35m|[m * [32m|[m [33m4f851cc[m Add exercise for lexicographical order functor
+* [36m|[m [32m|[m [33m5cefa1c[m Make instructions for functors more aesthetic.
+[36m|[m[36m/[m [32m/[m  
+* [32m|[m [33m641857e[m Uredil datoteke
+* [32m|[m [33m9f5ddc2[m Fix links to lecture notes for trees & modularity
+* [32m|[m [33m6a629ea[m Fix example typo
+* [32m|[m [33m430acf4[m Extend exercises for modules.
+* [32m|[m [33mb511436[m Add dictionaries to tree exercises and move additional out
+* [32m|[m [33mf32028b[m Boljše barve pri predstavitvi gnezdenega seznama
+* [32m|[m [33m20ec38e[m Globine spremenil v višine
+* [32m|[m [33ma127ab4[m Datoteke s predavanj
+* [32m|[m [33m431244a[m Popravki prosojnic
+* [32m|[m [33m5495229[m Prosojnice za iskalna drevesa
+* [32m|[m [33m1e635a4[m Spet preuredil gradiva
+* [32m|[m [33mde4f969[m Re-add ekvivalence.pdf
+* [32m|[m [33m5d55d54[m Počistil gradiva za dokazovanje
+* [32m|[m   [33m85b10be[m Merge branch 'master' of github.com:matijapretnar/programiranje-1
+[1;31m|[m[32m\[m [32m\[m  
+[1;31m|[m [32m|[m[32m/[m  
+[1;31m|[m * [33m1f6e6c5[m Update exercises for dynamic programing 1
+[1;31m|[m * [33m8c949f2[m Update exercises for quicksort.
+[1;31m|[m * [33m30d87fe[m Update sorting exercises.
+* [1;32m|[m [33ma2be33c[m Počistil zapiske iz ekvivalenc
+[1;32m|[m[1;32m/[m  
+* [33m8c881df[m Popravki prosojnic iz čistosti
+* [33m765d3ce[m Uredil imena prosojnic
+* [33m2e88905[m Razporedil računsko zahtevnost
+* [33ma7fb9d4[m AVL drevesa pridružil iskalnim
+* [33mbb965a0[m Prosojnice za učinke in čistost
+* [33mece078e[m Preureditev prosojnic
+* [33m549336e[m Prosojnice za deli in vladaj
+* [33me84c5dd[m Združil prosojnice iz memoizacije
+* [33m06ece98[m Slike s prosojnic dal v posebne mape
+* [33mf95dd42[m Preuredil vrstni red poglavij
+* [33m53aae35[m Gradiva za definicije tipov
+* [33mceaf270[m Fix example for [double] in intro exercises.
+* [33m1819f50[m Datoteke s predavanj
+* [33m6f2c567[m Gradiva s predavanj
+* [33mf2b90de[m Translating pandas exercise.
+* [33m2d8af99[m Add instructions for python task, add cat url
+* [33m707445d[m Add pandas exercises
+*   [33m63c5f37[m Merge branch 'master' of github.com:matijapretnar/programiranje-1
+[1;33m|[m[1;34m\[m  
+[1;33m|[m * [33m476ee33[m bye bear
+[1;33m|[m * [33mf296750[m hi bear
+[1;33m|[m *   [33mf8579a7[m Merge branch 'master' of https://github.com/matijapretnar/programiranje-1
+[1;33m|[m [1;35m|[m[1;36m\[m  
+[1;33m|[m * [1;36m|[m [33m34412cd[m start solving sorting exercises
+* [1;36m|[m [1;36m|[m [33m78b1d39[m Počistil analizo podatkov
+[1;36m|[m [1;36m|[m[1;36m/[m  
+[1;36m|[m[1;36m/[m[1;36m|[m   
+* [1;36m|[m [33mc4adcd1[m Odstranil zajete HTML strani
+* [1;36m|[m [33m6c6763a[m Popravek analize podatkov
+* [1;36m|[m [33mae8bf49[m Natančnejši zajem podatkov
+* [1;36m|[m [33m22649ab[m Popravek definicije notacije velikega O
+* [1;36m|[m [33mb6b7b40[m Prosojnice naredil brezčasne
+* [1;36m|[m   [33maf7e58d[m Merge branch 'exams' of git.fmf.uni-lj.si:philipp.haselwarter/programiranje-1 into exams
+[31m|[m[32m\[m [1;36m\[m  
+[31m|[m * [1;36m|[m [33m3da417a[m Add solutions to new exercise.
+* [32m|[m [1;36m|[m [33m2a7bdf2[m Osnovna gradiva za 3. predavanja
+* [32m|[m [1;36m|[m [33m8afff72[m Dodal PDF z 2. izpitom
+* [32m|[m [1;36m|[m   [33m8b6e31f[m Merge branch 'exams'
+[33m|[m[32m\[m [32m\[m [1;36m\[m  
+[33m|[m [32m|[m[32m/[m [1;36m/[m  
+[33m|[m * [1;36m|[m [33m5531309[m Popravki izpita
+[33m|[m * [1;36m|[m [33m500953a[m Fix some parts of the exercises and add instructions.
+[33m|[m * [1;36m|[m [33m3b637a6[m Change an exercise so that it feels more like dynamic programing.
+[33m|[m * [1;36m|[m [33m7ffbf40[m Add ideas for exam. No text yet, will be added later.
+[33m|[m * [1;36m|[m [33m09e6455[m Minor fixes
+[33m|[m * [1;36m|[m [33m8d57e40[m Roughly translate exam to slovene. Change [fold] for [nelist] to match [List.fold_left].
+[33m|[m * [1;36m|[m [33m4c8a9f3[m Add exam & solutions for 6th of July
+* [34m|[m [1;36m|[m [33med995c3[m Razporedil stara gradiva iz analize podatkov
+* [34m|[m [1;36m|[m [33m8a89a5c[m Datoteke z 2. predavanj
+* [34m|[m [1;36m|[m [33mb56512e[m Počistil datoteke s 1. predavanj
+* [34m|[m [1;36m|[m [33me5e3d64[m Datoteke za regularne izraze
+* [34m|[m [1;36m|[m [33mef5f0f6[m Fix of previous fix.
+* [34m|[m [1;36m|[m [33maa9cd8f[m Minor typo.
+* [34m|[m [1;36m|[m [33md4446f7[m Update module exercises.
+* [34m|[m [1;36m|[m   [33m2866e1e[m Merge branch 'master' of github.com:matijapretnar/programiranje-1
+[35m|[m[34m\[m [34m\[m [1;36m\[m  
+[35m|[m [34m|[m[34m/[m [1;36m/[m  
+[35m|[m * [1;36m|[m [33mc6007fe[m[33m ([m[1;33mtag: 2017-18[m[33m)[m Popravil CSS za prosojnice
+[35m|[m * [1;36m|[m [33ma1d4e38[m PDF 1. pisnega izpita
+[35m|[m * [1;36m|[m [33mf30112e[m Uskladil vzorčno datoteko z izpitom
+[35m|[m * [1;36m|[m [33m8c02050[m Change time limit back to 150min
+[35m|[m * [1;36m|[m [33m964a513[m Popravki izpita
+[35m|[m * [1;36m|[m   [33mc388ab0[m Merge remote-tracking branch 'fmf/exams-2017-2018' into exams
+[35m|[m [1;31m|[m[1;32m\[m [1;36m\[m  
+[35m|[m [1;31m|[m * [1;36m|[m [33m0a6079b[m Fix style mistakes.
+[35m|[m [1;31m|[m * [1;36m|[m [33md44e11f[m Fix typo
+[35m|[m [1;31m|[m * [1;36m|[m [33m061f8d2[m Add .tex instructions.
+[35m|[m [1;31m|[m * [1;36m|[m   [33m39a9947[m YMerge branch 'master' into exams-2017-2018
+[35m|[m [1;31m|[m [1;33m|[m[1;34m\[m [1;36m\[m  
+[35m|[m [1;31m|[m * [1;34m|[m [1;36m|[m [33mb160b17[m Add fixes suggested by Anja
+[35m|[m [1;31m|[m * [1;34m|[m [1;36m|[m [33m2b3a521[m Add clarification
+[35m|[m [1;31m|[m * [1;34m|[m [1;36m|[m [33mfd4bc90[m Add instructions to dynamic exercise
+[35m|[m [1;31m|[m * [1;34m|[m [1;36m|[m [33m263c168[m Add ideas for exams exercises for 24.1.
+[35m|[m * [1;34m|[m [1;34m|[m [1;36m|[m   [33m0b60e14[m Merge branch 'master' into exams
+[35m|[m [1;35m|[m[1;36m\[m [1;34m\[m [1;34m\[m [1;36m\[m  
+[35m|[m * [1;36m\[m [1;34m\[m [1;34m\[m [1;36m\[m   [33m6e8d293[m Merge branch 'exams' of git.fmf.uni-lj.si:philipp.haselwarter/programiranje-1 into exams
+[35m|[m [31m|[m[32m\[m [1;36m\[m [1;34m\[m [1;34m\[m [1;36m\[m  
+[35m|[m [31m|[m * [1;36m|[m [1;34m|[m [1;34m|[m [1;36m|[m [33m4a03a47[m Dodal primer pri 2b) in pojasnilo pri 3).
+[35m|[m [31m|[m * [1;36m|[m [1;34m|[m [1;34m|[m [1;36m|[m [33mbb2aae5[m Dodal 3. izpit
+[35m|[m * [32m|[m [1;36m|[m [1;34m|[m [1;34m|[m [1;36m|[m [33m833bba3[m Translate exam from 2017-07-11
+* [32m|[m [32m|[m [1;36m|[m [1;34m|[m [1;34m|[m [1;36m|[m [33m73cb9a9[m Update BST exercises.
+* [32m|[m [32m|[m [1;36m|[m [1;34m|[m [1;34m|[m [1;36m|[m [33m99565a1[m Update exercises for time complexity.
+* [32m|[m [32m|[m [1;36m|[m [1;34m|[m [1;34m|[m [1;36m|[m [33m3c19780[m Change python files according to pep8.
+* [32m|[m [32m|[m [1;36m|[m [1;34m|[m [1;34m|[m [1;36m|[m [33m55db4a6[m Update exercises for type definitions.
+* [32m|[m [32m|[m [1;36m|[m [1;34m|[m [1;34m|[m [1;36m|[m [33me5c254f[m Change [lst] to [list] to improve readability.
+* [32m|[m [32m|[m [1;36m|[m [1;34m|[m [1;34m|[m [1;36m|[m [33md9692e4[m Update higher order exercises and slight modification in previous ones.
+* [32m|[m [32m|[m [1;36m|[m [1;34m|[m [1;34m|[m [1;36m|[m [33m7e5b8c0[m Minor typo
+* [32m|[m [32m|[m [1;36m|[m [1;34m|[m [1;34m|[m [1;36m|[m [33m208549b[m Update intro exercises to Ocaml.
+* [32m|[m [32m|[m [1;36m|[m [1;34m|[m [1;34m|[m [1;36m|[m [33m09badce[m Update exercises for regex and requests.
+[1;36m|[m [32m|[m[1;36m_[m[32m|[m[1;36m/[m [1;34m/[m [1;34m/[m [1;36m/[m  
+[1;36m|[m[1;36m/[m[32m|[m [32m|[m [1;34m|[m [1;34m|[m [1;36m|[m   
+* [32m|[m [32m|[m [1;34m|[m [1;34m|[m [1;36m|[m   [33mac97d52[m Merge remote-tracking branch 'fmf/exams-2017-12-midterm'
+[33m|[m[34m\[m [32m\[m [32m\[m [1;34m\[m [1;34m\[m [1;36m\[m  
+[33m|[m * [32m|[m [32m|[m [1;34m|[m [1;34m|[m [1;36m|[m [33m5765fde[m Manjši popravki
+[33m|[m * [32m|[m [32m|[m [1;34m|[m [1;34m|[m [1;36m|[m [33ma6a61b7[m fixed instructions in print task
+[33m|[m * [32m|[m [32m|[m [1;34m|[m [1;34m|[m [1;36m|[m [33mb2fdec6[m fixed function fibonacci name
+[33m|[m * [32m|[m [32m|[m [1;34m|[m [1;34m|[m [1;36m|[m [33me6d4e36[m Clean up files with old dates (forgoten in previous commit).
+[33m|[m * [32m|[m [32m|[m [1;34m|[m [1;34m|[m [1;36m|[m [33mf23900d[m Add slovene version and change dates in filenames.
+[33m|[m * [32m|[m [32m|[m [1;34m|[m [1;34m|[m [1;36m|[m [33mec4559d[m Preimenoval izpit
+[33m|[m * [32m|[m [32m|[m [1;34m|[m [1;34m|[m [1;36m|[m [33mab3b5c2[m Prevedel poskusni izpit
+[33m|[m * [32m|[m [32m|[m [1;34m|[m [1;34m|[m [1;36m|[m [33mf65e85c[m Add instructions to wide_tree
+[33m|[m * [32m|[m [32m|[m [1;34m|[m [1;34m|[m [1;36m|[m [33mf2e48d5[m Extract exercises for midterms
+[33m|[m * [32m|[m [32m|[m [1;34m|[m [1;34m|[m [1;36m|[m [33m8aa1a0d[m Add instructions for mock midterm
+* [34m|[m [32m|[m [32m|[m [1;34m|[m [1;34m|[m [1;36m|[m   [33md871a05[m Merge pull request #7 from KapusN13/patch-1
+[1;34m|[m[36m\[m [34m\[m [32m\[m [32m\[m [1;34m\[m [1;34m\[m [1;36m\[m  
+[1;34m|[m [36m|[m[1;34m_[m[34m|[m[1;34m_[m[32m|[m[1;34m_[m[32m|[m[1;34m_[m[1;34m|[m[1;34m/[m [1;36m/[m  
+[1;34m|[m[1;34m/[m[36m|[m [34m|[m [32m|[m [32m|[m [1;34m|[m [1;36m|[m   
+[1;34m|[m * [34m|[m [32m|[m [32m|[m [1;34m|[m [1;36m|[m [33m75ba8df[m Update dinamicno.py
+[1;34m|[m * [34m|[m [32m|[m [32m|[m [1;34m|[m [1;36m|[m [33m8a4be7e[m Update dinamicno.py
+[1;34m|[m * [34m|[m [32m|[m [32m|[m [1;34m|[m [1;36m|[m [33ma01b2d1[m Update dinamicno.py
+[1;34m|[m[1;34m/[m [34m/[m [32m/[m [32m/[m [1;34m/[m [1;36m/[m  
+* [34m|[m [32m|[m [32m|[m [1;34m|[m [1;36m|[m [33md2bb721[m Mali popravek
+* [34m|[m [32m|[m [32m|[m [1;34m|[m [1;36m|[m [33m5529226[m Datoteke s predavanj
+* [34m|[m [32m|[m [32m|[m [1;34m|[m [1;36m|[m [33m6096d8a[m Manjši popravki
+* [34m|[m [32m|[m [32m|[m [1;34m|[m [1;36m|[m [33m855ddf4[m Prosojnice za zadnje predavanje
+* [34m|[m [32m|[m [32m|[m [1;34m|[m [1;36m|[m [33m9091af1[m Zapiski iz dokazovanja
+[1;34m|[m [34m|[m[1;34m_[m[32m|[m[1;34m_[m[32m|[m[1;34m/[m [1;36m/[m  
+[1;34m|[m[1;34m/[m[34m|[m [32m|[m [32m|[m [1;36m|[m   
+* [34m|[m [32m|[m [32m|[m [1;36m|[m [33mf60048b[m Add bonus exams
+* [34m|[m [32m|[m [32m|[m [1;36m|[m [33m6d27c5a[m Add additional exercises for exam practice
+* [34m|[m [32m|[m [32m|[m [1;36m|[m [33m46af573[m Add slovene versions
+* [34m|[m [32m|[m [32m|[m [1;36m|[m [33m261ca47[m Move memoization exercises
+* [34m|[m [32m|[m [32m|[m [1;36m|[m   [33md54efa9[m Merge branch 'master' of https://github.com/matijapretnar/programiranje-1
+[1;31m|[m[1;32m\[m [34m\[m [32m\[m [32m\[m [1;36m\[m  
+[1;31m|[m * [34m|[m [32m|[m [32m|[m [1;36m|[m [33m6a884cd[m Datoteke iz memoizacije
+[1;31m|[m * [34m|[m [32m|[m [32m|[m [1;36m|[m [33md26c670[m Dopolnitve datotek za module
+[1;31m|[m * [34m|[m [32m|[m [32m|[m [1;36m|[m [33m068a45d[m Prosojnice za memoizacijo
+* [1;32m|[m [34m|[m [32m|[m [32m|[m [1;36m|[m [33m9ff605d[m Detailed step-by-step dynamic programming exercises
+[1;32m|[m[1;32m/[m [34m/[m [32m/[m [32m/[m [1;36m/[m  
+* [34m|[m [32m|[m [32m|[m [1;36m|[m [33m87bb58c[m Add english versions of exercises 11 and 12
+* [34m|[m [32m|[m [32m|[m [1;36m|[m [33m14180bb[m add exercises 11 and 12
+* [34m|[m [32m|[m [32m|[m [1;36m|[m [33m2776068[m Datoteke s predavanj
+* [34m|[m [32m|[m [32m|[m [1;36m|[m [33me8db622[m Prosojnice za dinamično programiranje
+* [34m|[m [32m|[m [32m|[m [1;36m|[m [33m65d2f0a[m Datoteke za deli in vladaj
+[1;36m|[m [34m|[m[1;36m_[m[32m|[m[1;36m_[m[32m|[m[1;36m/[m  
+[1;36m|[m[1;36m/[m[34m|[m [32m|[m [32m|[m   
+* [34m|[m [32m|[m [32m|[m [33me53eb27[m Add slovene version of exercises.
+* [34m|[m [32m|[m [32m|[m [33mb4875e6[m Add sorting exercises
+* [34m|[m [32m|[m [32m|[m   [33ma8e5fda[m Merge pull request #5 from matejxx1/master
+[1;33m|[m[1;34m\[m [34m\[m [32m\[m [32m\[m  
+[1;33m|[m * [34m|[m [32m|[m [32m|[m [33m6a27d7c[m  popravil napako
+[1;33m|[m[1;33m/[m [34m/[m [32m/[m [32m/[m  
+* [34m|[m [32m|[m [32m|[m [33me8a0831[m Datoteke s predavanj o spremenljivih podatkovnih strukturah
+* [34m|[m [32m|[m [32m|[m [33m42c7695[m Manjši popravki
+* [34m|[m [32m|[m [32m|[m [33m6ca92c0[m Dodal prosojnice za spremenljive podatkovne strukture
+* [34m|[m [32m|[m [32m|[m [33meb9cf6f[m Add slovene version of induction exercises (without solutions). I see no reason to translate to english right now.
+* [34m|[m [32m|[m [32m|[m [33mb8c7ccd[m Add simple compilation instructions for default windows installation.
+* [34m|[m [32m|[m [32m|[m [33m045e67a[m Add slovene version of ocaml exercises for 9.
+* [34m|[m [32m|[m [32m|[m [33m30ea871[m  Add english version of ocaml exercises for 9.
+* [34m|[m [32m|[m [32m|[m [33m7cca896[m Datoteke s predavanj
+* [34m|[m [32m|[m [32m|[m [33m102ccd1[m Dodal poskusni izpit
+* [34m|[m [32m|[m [32m|[m [33m4b89966[m Popravki prosojnic
+* [34m|[m [32m|[m [32m|[m [33m06ca3a3[m Datoteke za učinke
+* [34m|[m [32m|[m [32m|[m [33m400cd62[m Prosojnice za čistost
+[34m|[m[34m/[m [32m/[m [32m/[m  
+* [32m|[m [32m|[m   [33mc139eaa[m Merge branch 'master' of https://github.com/matijapretnar/programiranje-1
+[1;35m|[m[1;36m\[m [32m\[m [32m\[m  
+[1;35m|[m * [32m|[m [32m|[m [33mbb90dfe[m Fix mistakes of previous overwriting.
+[1;35m|[m * [32m|[m [32m|[m [33mfcebdd8[m Add slovene version.
+* [1;36m|[m [32m|[m [32m|[m [33m408795b[m fixup terminology
+[1;36m|[m[1;36m/[m [32m/[m [32m/[m  
+* [32m|[m [32m|[m [33m8e2fd16[m Disembowel exercise modules
+* [32m|[m [32m|[m [33m011305e[m Datoteka s predavanj
+* [32m|[m [32m|[m [33m8214978[m Implementacija dreves v Pythonu
+* [32m|[m [32m|[m [33m3fae72f[m Prosojnice za module in uravnotežena drevesa
+* [32m|[m [32m|[m [33mac586fd[m Razbil prosojnice na časovno zahtevnost in iskalna drevesa
+* [32m|[m [32m|[m [33m96855ec[m Razbil prosojnice na časovno zahtevnost in iskalna drevesa
+* [32m|[m [32m|[m [33m768646b[m Remove hint that only confuses people.
+* [32m|[m [32m|[m [33m6c0292d[m Remove even more sneaky slovene comments in english files.
+* [32m|[m [32m|[m [33m81d0f6c[m Fix remains of slovene in english file.
+* [32m|[m [32m|[m [33m6b66208[m Add better test for bst_of_list
+* [32m|[m [32m|[m [33m59ec106[m Add english version of python exercise and fix a minor mistake.
+* [32m|[m [32m|[m [33mb94f65b[m Add english version of OCaml exercise
+* [32m|[m [32m|[m [33m6becfff[m Add file for time complexity tests.
+* [32m|[m [32m|[m [33m8c02eca[m Fix some minor mistakes
+* [32m|[m [32m|[m [33mb44144b[m Add slovene version
+* [32m|[m [32m|[m [33mf10d280[m Dodal datoteke s predavanj
+* [32m|[m [32m|[m [33mafab75b[m Prosojnice za časovno zahtevnost
+* [32m|[m [32m|[m [33mf5ebcf2[m Manjši popravki kode prosojnic
+* [32m|[m [32m|[m [33m7fa3bea[m Remove solutions from master, leave them in solution branch.
+* [32m|[m [32m|[m [33m841f1be[m fix type of cast_spells
+* [32m|[m [32m|[m [33mdb6e4a2[m Add slovene version of todays exercises, because Matija likes it this way.
+* [32m|[m [32m|[m [33m45823e1[m Add general max_list exercise
+* [32m|[m [32m|[m [33meb52bdd[m Datatype exercises
+* [32m|[m [32m|[m [33m1c29556[m Predavanja iz definicij tipov
+* [32m|[m [32m|[m [33mf4aeb41[m Add solutions to 'uvod v ocaml' exercises.
+* [32m|[m [32m|[m [33maea90fe[m Še malo bolj počistil kodo prosojnic
+* [32m|[m [32m|[m [33m64cefc2[m Počistil kodo prosojnic
+* [32m|[m [32m|[m [33m418a223[m Dodal prastare izpite
+* [32m|[m [32m|[m   [33m368e5fd[m Merge branch 'drNancelj-patch-1'
+[31m|[m[32m\[m [32m\[m [32m\[m  
+[31m|[m * [32m\[m [32m\[m   [33m967d016[m Merge branch 'patch-1' of https://github.com/drNancelj/programiranje-1 into drNancelj-patch-1
+[31m|[m [31m|[m[34m\[m [32m\[m [32m\[m  
+[31m|[m[31m/[m [34m/[m [32m/[m [32m/[m  
+[31m|[m * [32m|[m [32m|[m [33m09120e7[m Update Euler.hs
+* [34m|[m [32m|[m [32m|[m [33m6fb3785[m Preuredil datoteke
+* [34m|[m [32m|[m [32m|[m [33md71005c[m Fix a wrong example for function 'first'
+* [34m|[m [32m|[m [32m|[m [33mab80d44[m Updated some instructions for clarity.
+* [34m|[m [32m|[m [32m|[m   [33m09592c5[m Merge branch 'master' of github.com:matijapretnar/programiranje-1
+[35m|[m[36m\[m [34m\[m [32m\[m [32m\[m  
+[35m|[m * [34m\[m [32m\[m [32m\[m   [33m5414b46[m Merge branch 'master' of github.com:matijapretnar/programiranje-1
+[35m|[m [1;31m|[m[1;32m\[m [34m\[m [32m\[m [32m\[m  
+[35m|[m * [1;32m|[m [34m|[m [32m|[m [32m|[m [33m8608640[m Datoteke s predavanj
+[35m|[m * [1;32m|[m [34m|[m [32m|[m [32m|[m [33m6304d0e[m Preuredil prosojnice za funkcijsko programiranje
+* [1;32m|[m [1;32m|[m [34m|[m [32m|[m [32m|[m [33m8c95cd8[m Add exercises.
+[1;32m|[m [1;32m|[m[1;32m/[m [34m/[m [32m/[m [32m/[m  
+[1;32m|[m[1;32m/[m[1;32m|[m [34m|[m [32m|[m [32m|[m   
+* [1;32m|[m [34m|[m [32m|[m [32m|[m [33mfc2f345[m Renamed subfolders for consistency with analiza-podatkov
+* [1;32m|[m [34m|[m [32m|[m [32m|[m [33m0bfdb1d[m Add subfolders to distinguish lectures and exercises.
+[1;32m|[m[1;32m/[m [34m/[m [32m/[m [32m/[m  
+* [34m|[m [32m|[m [32m|[m [33m82522f6[m Prosojnice za 2. predavanje
+* [34m|[m [32m|[m [32m|[m [33me083415[m Dodal README
+* [34m|[m [32m|[m [32m|[m [33mcd8467a[m Dodal pravilen link na jQuery
+* [34m|[m [32m|[m [32m|[m [33m3254421[m Dodal prosojnice za predavanja iz OCamla
+* [34m|[m [32m|[m [32m|[m   [33m4ebed66[m Merge branch 'master' of github.com:matijapretnar/programiranje-1
+[1;33m|[m[1;34m\[m [34m\[m [32m\[m [32m\[m  
+[1;33m|[m * [34m|[m [32m|[m [32m|[m [33m78e26cb[m Remove keywords in ocaml-1 exercise files for better template.
+[1;33m|[m * [34m|[m [32m|[m [32m|[m [33m5a36a31[m Add files for ocaml exercises 1
+[1;33m|[m * [34m|[m [32m|[m [32m|[m [33m7c0f6d6[m (ap) Save files in utf-8
+* [1;34m|[m [34m|[m [32m|[m [32m|[m [33m5b5a472[m Serijam, ki trajajo le eno leto, dodal leto konca
+* [1;34m|[m [34m|[m [32m|[m [32m|[m [33mb3a49d3[m Dodatni komentarji v zvezku za analizo podatkov
+[1;34m|[m[1;34m/[m [34m/[m [32m/[m [32m/[m  
+* [34m|[m [32m|[m [32m|[m [33m92bdb23[m Dokončno uredil zvezke
+* [34m|[m [32m|[m [32m|[m [33m1fc51bf[m Uredil datoteke za analizo podatkov
+* [34m|[m [32m|[m [32m|[m [33ma66a355[m 3. izpit 2016/17
+* [34m|[m [32m|[m [32m|[m [33m2843cbd[m Datoteke za teorijo izračunljivosti
+* [34m|[m [32m|[m [32m|[m [33md15586d[m Začel urejati datoteke za analizo podatkov
+* [34m|[m [32m|[m [32m|[m [33m4a30fe2[m Add more comments to the catlib
+* [34m|[m [32m|[m [32m|[m [33md5fb70d[m Take the skeleton of the bear
+* [34m|[m [32m|[m [32m|[m [33m43408dc[m Add more comments to the grateful bear
+* [34m|[m [32m|[m [32m|[m [33maf245ab[m Ignore some latex compilation files
+* [34m|[m [32m|[m [32m|[m [33m0463d3e[m move s
+* [34m|[m [32m|[m [32m|[m [33m2f0e03f[m Add csv fn var
+* [34m|[m [32m|[m [32m|[m [33m68338f0[m Don't parse URL
+* [34m|[m [32m|[m [32m|[m [33m8281648[m add hint
+* [34m|[m [32m|[m [32m|[m [33md1eca59[m Write a skeleton for the bolha cat library
+* [34m|[m [32m|[m [32m|[m [33m08c740b[m Datoteke z 2. predavanj
+* [34m|[m [32m|[m [32m|[m   [33m338d748[m Merge branch 'master' of github.com:matijapretnar/programiranje-1
+[1;35m|[m[1;36m\[m [34m\[m [32m\[m [32m\[m  
+[1;35m|[m * [34m\[m [32m\[m [32m\[m   [33m4ced67f[m Merge pull request #4 from drNancelj/patch-2
+[1;35m|[m [32m|[m[32m\[m [34m\[m [32m\[m [32m\[m  
+[1;35m|[m [32m|[m [32m|[m[32m_[m[34m|[m[32m_[m[32m|[m[32m/[m  
+[1;35m|[m [32m|[m[32m/[m[32m|[m [34m|[m [32m|[m   
+[1;35m|[m [32m|[m * [34m|[m [32m|[m [33mc4e4766[m Update 5-pravilnost-programov.html
+[1;35m|[m [32m|[m[32m/[m [34m/[m [32m/[m  
+* [32m|[m [34m|[m [32m|[m [33m1ae20e3[m Datoteke za zajem podatkov
+[32m|[m[32m/[m [34m/[m [32m/[m  
+* [34m|[m [32m|[m [33mb40fd78[m[33m ([m[1;33mtag: 2016-17[m[33m)[m Objavil PDFje
+[32m|[m [34m|[m[32m/[m  
+[32m|[m[32m/[m[34m|[m   
+* [34m|[m [33me5eeb20[m Popravil slovnično napako
+* [34m|[m [33m286ab20[m Add examples of potential corner cases
+* [34m|[m [33mc46e996[m Dodal 2. izpit
+* [34m|[m [33mfce5f7d[m Opozorilo, da seznami v Haskellu nimajo konstantnega dostopa
+* [34m|[m [33mae2f3a9[m Search for min in fixed point exercise
+* [34m|[m [33m8181153[m Naloge uredil od lažjih do težjih
+* [34m|[m [33m9b0b5b8[m Poenostavil izpit.
+* [34m|[m [33m31559b4[m Manjši popravki izpita
+* [34m|[m [33m7688d36[m Dodal nalogi Nim in Aritmetični izrazi
+* [34m|[m [33m41f6666[m Dodal nalogo Fiksne točke
+* [34m|[m [33mc642435[m Dodal osnutek izpita
+* [34m|[m [33m7c0d604[m wip
+* [34m|[m   [33mcfd8ffb[m Merge branch 'master' into solutions
+[33m|[m[34m\[m [34m\[m  
+[33m|[m * [34m|[m [33m689a1bb[m Dopolnil zapiske o ekvivalencah
+[33m|[m * [34m|[m [33m5add82e[m Malenkost uredil stare komentarje
+[33m|[m * [34m|[m [33mb437712[m Nadaljeval z urejanjem komentarjev
+[33m|[m * [34m|[m [33m522e96c[m Uredil datoteke
+[33m|[m * [34m|[m [33m0283501[m Dodal vaje iz dinamičnega programiranja
+[33m|[m * [34m|[m [33m28b34fe[m Začel dodajati komentarje vaj
+* [34m|[m [34m|[m [33m959630f[m (psa-5) Add mergesort in Haskell
+* [34m|[m [34m|[m   [33mbfd095a[m Merge branch 'master' into solutions
+[35m|[m[34m\[m [34m\[m [34m\[m  
+[35m|[m [34m|[m[34m/[m [34m/[m  
+[35m|[m * [34m|[m [33m0525e4b[m (psa-5) Add insertionsort
+* [36m|[m [34m|[m   [33mcc71db5[m Merge branch 'master' into solutions
+[1;31m|[m[36m\[m [36m\[m [34m\[m  
+[1;31m|[m [36m|[m[36m/[m [34m/[m  
+[1;31m|[m * [34m|[m [33mf63f1b0[m (psa-5) Add plotting
+[1;31m|[m * [34m|[m [33md9554fb[m (psa-5) Add quickselect exercise
+* [1;32m|[m [34m|[m [33m2fdd221[m Simplify (?) quickselect
+* [1;32m|[m [34m|[m [33mb2d255b[m (psa-5) Add quickselect solutions
+* [1;32m|[m [34m|[m [33m4f83788[m (psa-5) Add quicksort solutions
+* [1;32m|[m [34m|[m   [33m50579af[m Merge branch 'master' into solutions
+[1;33m|[m[1;32m\[m [1;32m\[m [34m\[m  
+[1;33m|[m [1;32m|[m[1;32m/[m [34m/[m  
+[1;33m|[m * [34m|[m [33m7aabb1e[m (psa-5) Add quicksort exercises, benchmark
+* [1;34m|[m [34m|[m   [33mde521f9[m Merge remote-tracking branch 'lab/master' into solutions
+[1;35m|[m[1;34m\[m [1;34m\[m [34m\[m  
+[1;35m|[m [1;34m|[m[1;34m/[m [34m/[m  
+[1;35m|[m * [34m|[m [33m1dcf78f[m Dodal vaje iz urejanja seznamov
+[1;35m|[m * [34m|[m [33me6081ca[m Fiksiral kodno tabelo na utf-8 (na windowsih je sicer CP1250)
+[1;35m|[m * [34m|[m [33mda53fde[m Dodal PDF-je.
+[1;35m|[m * [34m|[m [33mc5dda91[m Dodal enostavnejšo implementacijo iskalnih dreves
+[1;35m|[m * [34m|[m [33mec791a6[m Make rebalance available
+[1;35m|[m * [34m|[m [33m3d68cd0[m (psa-1) add drawing function
+[1;35m|[m * [34m|[m [33mb7176a7[m (psa-1) AVL tree exercises
+[1;35m|[m * [34m|[m [33m7bd4a84[m Dodal vaje iz AVL dreves
+[1;35m|[m * [34m|[m   [33mef43f38[m Merge branch 'master' of https://github.com/matijapretnar/programiranje-1
+[1;35m|[m [31m|[m[32m\[m [34m\[m  
+[1;35m|[m [31m|[m * [34m|[m [33m3a640d0[m Popravil slovenski generator iskalnih dreves
+[1;35m|[m * [32m|[m [34m|[m [33m0db3e25[m Phonebook exercises
+[1;35m|[m [32m|[m[32m/[m [34m/[m  
+[1;35m|[m * [34m|[m [33mce49ac8[m Datoteke s predavanj.
+[1;35m|[m * [34m|[m [33m9a3b33f[m (hs-6) Add exercise versions
+[1;35m|[m * [34m|[m   [33mf60bada[m Merge branch 'master' of https://github.com/matijapretnar/programiranje-1
+[1;35m|[m [33m|[m[34m\[m [34m\[m  
+[1;35m|[m [33m|[m * [34m|[m [33m19cca6a[m Prevedel in pripravil vaje iz IO nalog
+* [33m|[m [34m|[m [34m|[m [33mdc8ce77[m spacing
+* [33m|[m [34m|[m [34m|[m [33m0aecb40[m (psa-1) AVL tree solutions
+* [33m|[m [34m|[m [34m|[m [33mcf2382d[m (psa-1) add missing case, fix warnings
+* [33m|[m [34m|[m [34m|[m   [33m91e1fd9[m Merge branch 'solutions' of git.fmf.uni-lj.si:philipp.haselwarter/programiranje-1 into solutions
+[35m|[m[36m\[m [33m\[m [34m\[m [34m\[m  
+[35m|[m * [33m|[m [34m|[m [34m|[m [33md121184[m (hs-6) Add generator for search trees, tests
+* [36m|[m [33m|[m [34m|[m [34m|[m [33m9c5dbba[m Dodal vaje in rešitve iz AVL dreves
+[36m|[m[36m/[m [33m/[m [34m/[m [34m/[m  
+* [33m|[m [34m|[m [34m|[m [33m38655ba[m Adding to dict with known key updates value
+* [33m|[m [34m|[m [34m|[m [33m7a3a2d4[m Updates to solutions for TypeClasses
+* [33m|[m [34m|[m [34m|[m [33m6087741[m Add solutions to hs-6
+* [33m|[m [34m|[m [34m|[m   [33md6e54d4[m Merge branch 'master' into solutions
+[1;31m|[m[33m\[m [33m\[m [34m\[m [34m\[m  
+[1;31m|[m [33m|[m[33m/[m [34m/[m [34m/[m  
+[1;31m|[m * [34m|[m [34m|[m [33m0c5885c[m Add a formal proof of the exercises, with a link to jsCoq
+* [1;32m|[m [34m|[m [34m|[m [33m3be42b6[m Add solutions for QuickCheck
+* [1;32m|[m [34m|[m [34m|[m   [33mc698a8c[m Merge branch 'master' into solutions
+[1;33m|[m[1;32m\[m [1;32m\[m [34m\[m [34m\[m  
+[1;33m|[m [1;32m|[m[1;32m/[m [34m/[m [34m/[m  
+[1;33m|[m * [34m|[m [34m|[m [33ma65dea2[m Rename QuickCheck, provide english version
+[1;33m|[m [34m|[m[34m/[m [34m/[m  
+[1;33m|[m * [34m|[m [33m11f9c7f[m Popravil vaje.
+[1;33m|[m * [34m|[m [33m6c7f3bc[m Popravil, da se vaje izvedejo.
+[1;33m|[m * [34m|[m [33me4fcafe[m Vaje za QuickCheck.
+[1;33m|[m * [34m|[m [33m14816c9[m Datoteke za preverjanje.
+[1;33m|[m * [34m|[m [33m6d4fe3e[m Datoteke s predavanj.
+* [1;34m|[m [34m|[m [33m0b78807[m Points for spiders
+* [1;34m|[m [34m|[m [33m8b2ee0f[m Add instances for Nats, C, Polynomials
+* [1;34m|[m [34m|[m   [33m5db4897[m Merge branch 'master' into solutions
+[1;35m|[m[1;34m\[m [1;34m\[m [34m\[m  
+[1;35m|[m [1;34m|[m[1;34m/[m [34m/[m  
+[1;35m|[m * [34m|[m [33m5a77e4a[m Translate Matija's modifications to hs-4
+[1;35m|[m * [34m|[m   [33m662c353[m Merge branch 'master' of https://github.com/matijapretnar/programiranje-1
+[1;35m|[m [31m|[m[32m\[m [34m\[m  
+[1;35m|[m [31m|[m * [34m|[m [33m0277073[m Preuredil vaje iz razredov tipov
+[1;35m|[m * [32m|[m [34m|[m [33mfddd1cf[m Translate hs-4/vaje, mostly
+[1;35m|[m [32m|[m[32m/[m [34m/[m  
+[1;35m|[m * [34m|[m [33mf61fbb2[m Dodal nalogo iz porazdelitev v RazrediTipov.hs
+[1;35m|[m * [34m|[m   [33m60cd318[m Merge branch 'master' of github.com:matijapretnar/programiranje-1
+[1;35m|[m [33m|[m[34m\[m [34m\[m  
+[1;35m|[m * [34m|[m [34m|[m [33m81a94ce[m Dodal naloge iz razredov tipov
+* [34m|[m [34m|[m [34m|[m [33m511fe04[m Add solutions for Types.hs
+* [34m|[m [34m|[m [34m|[m   [33m0c1fafd[m Merge branch 'master' into solutions
+[35m|[m[34m\[m [34m\[m [34m\[m [34m\[m  
+[35m|[m [34m|[m [34m|[m[34m/[m [34m/[m  
+[35m|[m [34m|[m[34m/[m[34m|[m [34m|[m   
+[35m|[m * [34m|[m [34m|[m [33m91bba86[m Popravil merge.
+[35m|[m * [34m|[m [34m|[m [33mb01ab37[m Popravil vaje.
+[35m|[m * [34m|[m [34m|[m [33md468bdb[m Dodal datoteke s predavanj
+[35m|[m * [34m|[m [34m|[m [33md671f89[m Change type of polynomials
+[35m|[m [34m|[m[34m/[m [34m/[m  
+* [34m|[m [34m|[m [33mae01be3[m hs-3: Solve Tree, Complex
+* [34m|[m [34m|[m   [33m18ad063[m Merge branch 'master' into solutions
+[1;31m|[m[34m\[m [34m\[m [34m\[m  
+[1;31m|[m [34m|[m[34m/[m [34m/[m  
+[1;31m|[m * [34m|[m [33mdace816[m (hs-3) Translate exercises, fix comments
+[1;31m|[m * [34m|[m [33m60a802a[m Dodal naloge iz podatkovnih tipov
+* [1;32m|[m [34m|[m [33m31ac091[m Small improvements on hs-2 solutions
+* [1;32m|[m [34m|[m [33m7c9ff00[m Počistil rešitve nalog iz rekurzije
+* [1;32m|[m [34m|[m   [33m050e6a8[m Merge branch 'master' into solutions
+[1;33m|[m[1;32m\[m [1;32m\[m [34m\[m  
+[1;33m|[m [1;32m|[m[1;32m/[m [34m/[m  
+[1;33m|[m * [34m|[m [33m2417cfd[m Improve comment, function name
+* [1;34m|[m [34m|[m [33m8b1b9ed[m Make patterns exhaustive with 'undefined', ignore variables more consistently
+* [1;34m|[m [34m|[m [33m822158b[m Fix extremely evil recursive definition
+* [1;34m|[m [34m|[m [33mfdd64fa[m Add solutions for hs-2
+* [1;34m|[m [34m|[m   [33m0c0cec4[m Merge branch 'master' into solutions
+[1;35m|[m[1;34m\[m [1;34m\[m [34m\[m  
+[1;35m|[m [1;34m|[m[1;34m/[m [34m/[m  
+[1;35m|[m * [34m|[m [33mc113bcc[m Translate, add last week's exercises for recursion + hints, comments
+[1;35m|[m * [34m|[m [33m294023c[m Capitalize Haskell filenames
+[1;35m|[m * [34m|[m   [33m59c7c8c[m Merge branch 'master' of github.com:matijapretnar/programiranje-1
+[1;35m|[m [31m|[m[32m\[m [34m\[m  
+[1;35m|[m [31m|[m * [34m|[m [33m22c09cb[m Uskladil poimenovanje imenikov
+[1;35m|[m * [32m|[m [34m|[m   [33me188322[m Merge branch 'master' of github.com:matijapretnar/programiranje-1
+[1;35m|[m [33m|[m[32m\[m [32m\[m [34m\[m  
+[1;35m|[m [33m|[m [32m|[m[32m/[m [34m/[m  
+[1;35m|[m [33m|[m * [34m|[m [33mc06ca29[m Uredil preostala predavanja za Haskell
+* [33m|[m [34m|[m [34m|[m [33m3d35bc1[m Dodal rešitve nalog iz rekurzije
+* [33m|[m [34m|[m [34m|[m   [33m4c3924e[m Merge branch 'master' into solutions
+[35m|[m[33m\[m [33m\[m [34m\[m [34m\[m  
+[35m|[m [33m|[m[33m/[m [34m/[m [34m/[m  
+[35m|[m * [34m|[m [34m|[m [33m871de9e[m Dodal vaje iz rekurzije
+[35m|[m [34m|[m[34m/[m [34m/[m  
+* [34m|[m [34m|[m [33m52c77c9[m Add solutions for the first Haskell exercises
+* [34m|[m [34m|[m [33ma593f5d[m Add (anti-) solutions for ap-1-zajem-podatkov/
+[34m|[m[34m/[m [34m/[m  
+* [34m|[m [33m626c557[m Import and translate the first Haskell exercise set
+* [34m|[m [33mdddf897[m Rename naloge -> vaje
+* [34m|[m [33m0193878[m Translate bear, change exercise 1, fix example 3
+* [34m|[m [33md68b745[m Import Urban's grateful bear regexp exercise
+* [34m|[m [33m14bcf55[m Datoteke s predavanj hs-1
+* [34m|[m [33m5c46d80[m Uredil prosojnice za uvodna predavanja iz Haskella
+* [34m|[m [33mc7ebd91[m Posodobil projekt
+* [34m|[m [33m4de103a[m Spremenil naslov projekta
+* [34m|[m [33m50aa522[m Preuredil iPython datoteke
+* [34m|[m [33m10191b6[m Posodobil projekt
+* [34m|[m [33m3e70c9a[m Dodal arhiv IMDB datotek
+* [34m|[m [33mc91b6a6[m Uporabil relativne poti
+* [34m|[m [33meef4771[m Posodobil iPython datoteke
+* [34m|[m [33md0fe3cd[m Ustrezno preimenoval mape
+* [34m|[m [33mc6aa228[m Dodal testni repozitorij s predavanj
+* [34m|[m [33m1837f85[m Pobrisal odvečne datoteke
+* [34m|[m [33mc3739e4[m Preimenoval 3. predavanje
+* [34m|[m [33ma486e78[m Uredil skripto za 3. predavanje
+* [34m|[m [33m0d3af81[m Konsistentno poimenoval skripte
+* [34m|[m [33m06b2399[m Uredil skripto za filme
+* [34m|[m [33m9a85eac[m Posodobil skripto z novimi vrednostmi
+* [34m|[m [33m62d6ac3[m Dodal skripto, ki dela CSV s filmi
+* [34m|[m [33m60d2d5c[m Manjši popravki prve skripte
+* [34m|[m [33m14fed9c[m Rešitve dveh lanskih izpitov
+* [34m|[m [33mdfbd8e4[m Lepše zlivanje
+* [34m|[m [33m2432d33[m Datoteke s 1. predavanj
+* [34m|[m [33m029e550[m[33m ([m[1;33mtag: 2015-16[m[33m)[m Preuredil datoteke
+* [34m|[m [33m2be2288[m Začel dodajati stare izpite
+* [34m|[m [33m4b2d536[m Popravil preštevanje korenov
+[34m|[m[34m/[m  
+* [33m7659d6d[m Dodal Bayesov klasifikator
+* [33m813c518[m Dodal datoteke s 14. predavanja
+* [33m259f7b0[m Posodobil datoteke s 13. predavanja
+*   [33m475c133[m Merge branch 'master' of github.com:matijapretnar/programiranje-1
+[1;31m|[m[1;32m\[m  
+[1;31m|[m *   [33m1a7d695[m Merge pull request #2 from KorosecN13/patch-1
+[1;31m|[m [1;33m|[m[1;34m\[m  
+[1;31m|[m [1;33m|[m * [33m8c7001f[m takewhile /= takeWhile
+* [1;33m|[m [1;34m|[m [33m1fcc2b3[m Z IMDBja zajel več filmov
+* [1;33m|[m [1;34m|[m [33m6d34811[m Dodal zajem števila korenov po žanrih
+* [1;33m|[m [1;34m|[m [33m4bc9e8e[m Ustvarjene CSV-je uredil v deterministični vrstni red
+* [1;33m|[m [1;34m|[m [33m15c8adb[m Dodal kopijo zajetih strani
+* [1;33m|[m [1;34m|[m [33m0360d42[m Ignoriral varnostne kopije IPythona
+* [1;33m|[m [1;34m|[m [33m02d06df[m Filmi v več žanrih se v seznamu določitev pojavijo le enkrat
+* [1;33m|[m [1;34m|[m [33m5551cb4[m Popravil pot do CSV datoteke
+* [1;33m|[m [1;34m|[m [33mf5545df[m Uredil datoteke s predavanj
+[1;33m|[m[1;33m/[m [1;34m/[m  
+* [1;34m|[m [33m5ddd8be[m Dodal datoteke s predavanj
+* [1;34m|[m [33me522083[m Dodal iPython Notebook
+* [1;34m|[m [33m2e827df[m Priprava CSV datotek
+* [1;34m|[m [33mb4ed63b[m Dodal README
+* [1;34m|[m [33m3dd91f8[m Uredil datoteke za projekt
+* [1;34m|[m [33m2e5d674[m Ločil datoteke na tiste s predavanj in tiste za projekt
+* [1;34m|[m [33m5f0abae[m Datoteke, napisane na predavanjih
+* [1;34m|[m [33mdacb093[m Poenostavil pomožne funkcije za delo s stranmi
+* [1;34m|[m [33m07771e7[m Datoteke za predavanje
+* [1;34m|[m [33mc727140[m Datoteke s predavanj
+* [1;34m|[m [33ma48d0ad[m Popravek hitrega urejanja
+* [1;34m|[m [33mc6a90a2[m Datoteke za deli & vladaj
+* [1;34m|[m [33mecde78c[m Dodal datoteke s predavanj
+* [1;34m|[m [33md87a96a[m Dodal datoteke za memoizacijo & deli in vladaj
+* [1;34m|[m [33m826f9b6[m Popravljeno v skladu s predavanji
+* [1;34m|[m [33m3d3b012[m Minsko polje zamenjal za miško
+* [1;34m|[m [33mcda0efb[m Dodal še en primer dinamičnega programiranja
+* [1;34m|[m   [33m101cee1[m Merge pull request #1 from ursa16180/master
+[1;35m|[m[1;36m\[m [1;34m\[m  
+[1;35m|[m * [1;34m|[m [33madd8dfa[m Update 5-razredi-tipov.html
+* [1;36m|[m [1;34m|[m [33m5738678[m Premaknil datoteke za dinamično programiranje
+* [1;36m|[m [1;34m|[m [33m897e2b2[m Dodal datoteke za dinamično programiranje
+* [1;36m|[m [1;34m|[m [33m7fdc30f[m Dodal rešitev 0-1 nahrbtnika
+* [1;36m|[m [1;34m|[m [33m5d4dc3e[m Datoteke s predavanj premaknil v podmape
+* [1;36m|[m [1;34m|[m [33m438a271[m Dodal kodo za enostavni in napačni 01 nahrbtnik
+* [1;36m|[m [1;34m|[m [33m29365c4[m Popravljen modul in test za slovarje s seznami
+* [1;36m|[m [1;34m|[m [33m8106814[m Boljši primeri iskalnih dreves
+* [1;36m|[m [1;34m|[m [33mc8f59f7[m Dodal .gitignore
+* [1;36m|[m [1;34m|[m [33m18eb108[m Dodal datoteke za 8. predavanje
+* [1;36m|[m [1;34m|[m [33m462fd31[m Dodal datoteke za 7. predavanje
+* [1;36m|[m [1;34m|[m [33m63f8fbd[m Pobrisal nepotrebno datoteko
+* [1;36m|[m [1;34m|[m [33m62dbaf9[m Pripravljene datoteke za vaje
+* [1;36m|[m [1;34m|[m [33m68ad96a[m Izboljšan primer s predavanj
+* [1;36m|[m [1;34m|[m [33mf3ea4aa[m Boljša implementacija Slovarjev
+* [1;36m|[m [1;34m|[m [33m37e1066[m Datoteke, napisane na predavanjih
+* [1;36m|[m [1;34m|[m [33mc0761a9[m Dodal primere za 6. predavanje
+* [1;36m|[m [1;34m|[m [33m26d39cc[m Boljše testiranje polimorfnih funkcij
+* [1;36m|[m [1;34m|[m [33m22786ec[m Popravek primera razredov tipov
+* [1;36m|[m [1;34m|[m [33m83ac12b[m Popravil naslove predavanj
+* [1;36m|[m [1;34m|[m [33m21f1dda[m Dopolnitve prosojnic
+* [1;36m|[m [1;34m|[m [33ma76ee96[m Preimenoval datoteko
+* [1;36m|[m [1;34m|[m [33m8c3fbf3[m Primer modula in IO-ja
+* [1;36m|[m [1;34m|[m [33mca6f546[m Dodal osnutek prosojnic za 6. poglavje
+* [1;36m|[m [1;34m|[m [33me6f6f7b[m Datoteke za 5. predavanje
+[1;36m|[m[1;36m/[m [1;34m/[m  
+* [1;34m|[m [33m6a84841[m Dodal prosojnice za 5. predavanje
+* [1;34m|[m [33m3bc0c07[m Uredil datoteke s predavanj
+* [1;34m|[m [33ma57b84b[m Dodal datoteke s predavanj
+* [1;34m|[m [33m61a6a76[m Premaknil Euler.hs
+* [1;34m|[m [33m71ceef9[m Popravki predstavitev
+[1;34m|[m[1;34m/[m  
+* [33m2751d9d[m Popravek izreka
+* [33m6ccf6c3[m Dodatna razlaga in trditve pri dokazovanju ekvivalenc
+* [33mb6904b6[m Rešitve Project Euler #1-#7
+* [33m3e3cb64[m Dodal prosojnice za 3. predavanje
+* [33me2a3815[m LaTeX z osnovnimi ekvivalencami
+* [33mec2febd[m Dodal dokazovanje ekvivalenc
+* [33m121a501[m Dodal opombe s 1. vaj
+* [33m1531e01[m Dodal prosojnice za 2. predavanje
+* [33m2596906[m Dodal prosojnice za 1. predavanje
