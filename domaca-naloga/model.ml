@@ -60,7 +60,7 @@ let get_column (grid : 'a grid) (col_ind : int) =
 let columns grid = List.init 9 (get_column grid)
 
 let get_box (grid : 'a grid) (box_ind : int) = 
-  Array.init 9 (fun element -> grid.((box_ind / 3) + element / 3).((box_ind mod 3) + element / 3))
+  Array.init 9 (fun element -> grid.(3 * (box_ind / 3) + element / 3).(3 * (box_ind mod 3) + element mod 3))
 
 let boxes grid = List.init 9 (get_box grid)
 
@@ -105,12 +105,12 @@ let grid_of_string cell_of_char str =
 
 type problem = { initial_grid : int option grid }
 
-let string_of_cell cell =
+let string_of_option cell =
   match cell with
   | None -> " "
   | Some x ->  Printf.sprintf "%d" x
 
-let print_problem problem : unit = print_grid (string_of_cell) problem.initial_grid
+let print_problem problem : unit = print_grid (string_of_option) problem.initial_grid
 
 let problem_of_string str =
   let cell_of_char = function
@@ -126,39 +126,26 @@ type solution = int grid
 
 let print_solution solution = print_grid (string_of_int) solution
 
-(*Funkcija sprejme rešen sudoku in pogleda da je vsota točna*)
-let valid_sudoku_sum (grid : solution) : bool = grid |> Array.to_list |> List.map (Array.fold_left (+) 0) |> List.fold_left (+) 0 = 450
-
-
 (*Funkcija ki sprejema seznam in pogleda če so v njem kakšne podvojene vrednosti*)
 let rec duplicates = function
   | [] -> false
   | x :: xs -> List.exists ((=) x) xs || duplicates xs
 
-(*Funkcija ki sprejema seznam arrayjev in pozicijo v arrayju in pogleda ali obstajajo duplikati na teh pozicijah*)
-let valid_ind (list: int array list) (cell_ind : int) =
-  let rec list_of_position list_of_array aux =
-    match list_of_array with
-    | [] -> aux
-    | x :: xs -> list_of_position xs (List.nth x cell_ind :: aux)
-  in duplicates (list_of_position (List.map (Array.to_list) list) []) = false
 
-(* Funkcija sprejme list in pogleda ali za vse pozicije drži da nimajo duplikatov*)
-let valid_seq (list : 'a list) : bool = 
-  List.init 9 (valid_ind list) |> List.for_all ((=) true)
-
-(*Funckija sprejme seznam arrayjev in za vsak array pogleda ali obstajajo duplikati. Če jih ni v nobenem vrne true*)
-let valid_boxes list = list |> List.map (Array.to_list) |> List.map duplicates |> List.for_all ((=) false) 
-
+(*Funkcija vzame dva seznama seznamov, jih združi in pretvori v seznam tuple-ov*)
+let combine_and_flat lst1 lst2 = List.init 9 (fun x -> List.combine (List.nth lst1 x) (List.nth lst2 x)) |> List.flatten
 
 (*Funkcija sprejema grid in vrne seznam seznamov. Funkcijo sem napisal, ker v tej verziji Array.combine še ne obstaja*)
 let grid_to_list_of_lists (grid: 'a grid) : 'a list list =
   grid |> Array.to_list |> List.map (Array.to_list)
 
 
-(*Funkcija vzame dva seznama seznamov, jih združi in pretvori v seznam tuple-ov*)
-let combine_and_flat lst1 lst2 = List.init 9 (fun x -> List.combine (List.nth lst1 x) (List.nth lst2 x)) |> List.flatten
+(*Funkcija sprejme rešen sudoku in pogleda da je vsota točna*)
+let valid_sudoku_sum (grid : solution) : bool = grid |> Array.to_list |> List.map (Array.fold_left (+) 0) |> List.fold_left (+) 0 = 405
 
+
+(*Funckija sprejme seznam arrayjev in za vsak array pogleda ali obstajajo duplikati. Če jih ni v nobenem vrne true*)
+let valid_sequence list = list |> List.map (Array.to_list) |> List.map duplicates |> List.for_all ((=) false) 
 
 
 (*Funkcija vzame začetni problem in pogleda ali se na vsaki poziciji v rešitvi številke ujemajo z številkami problema (če seveda obstajajo).*)
@@ -172,9 +159,23 @@ let solution_from_problem (problem : problem) (solution : solution) : bool =
     | (None, y) :: xs -> checking_tuples xs
   in checking_tuples (combine_and_flat lst1 lst2) 
     
-(*VSAK N-TI ELEMENT PO VRSTICAH JE N-TI STOLPEC !!! NEBODI BUTAST*)
 
 (*Funckija sprejme začetni problem in rešitev, ter pogleda vse potrebne/zadostne pogoje*)
-
 let is_valid_solution (problem : problem) (solution : solution) : bool = 
-  valid_sudoku_sum solution && valid_seq (rows solution) && valid_seq (columns solution) && valid_boxes (boxes solution) && solution_from_problem problem solution
+  valid_sudoku_sum solution && valid_sequence (boxes solution) && valid_sequence (columns solution) && valid_sequence (rows solution) && solution_from_problem problem solution
+
+
+(* Funkciji za nadaljne operacije na gridih *)
+let available_slots (grid : 'a grid) : (int * int) list =
+  let problem_list = grid_to_list_of_lists grid in
+  let ind_list = List.init 9 (fun x -> List.init 9 (fun y -> (x,y))) in
+  let state_ind = combine_and_flat problem_list ind_list in 
+  List.find_all (fun (x, y) -> if x = None then true else false) state_ind |> List.map (fun (x,y) -> y) 
+
+
+let possible_int (grid : 'a grid) ((row, column) : int * int) : int list=
+  let pos_int = List.init 9 (fun x -> x + 1) in
+  let used_row = get_row grid row |> Array.to_list in
+  let used_column = get_column grid column |> Array.to_list in 
+  let used_box = get_box grid (3 * (row / 3) + (column / 3)) |> Array.to_list in
+  List.filter (fun x -> Bool.not (List.mem (Some x) used_row || List.mem (Some x) used_column || List.mem (Some x) used_box)) pos_int 
