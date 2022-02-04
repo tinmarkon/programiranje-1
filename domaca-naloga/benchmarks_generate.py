@@ -63,9 +63,9 @@ def add_benchmarks(name, sudokus, csv_name, timeout=60, baseline=None):
 
 
 sudokus = [
-    os.path.join("sudokuji", filename)
-    for filename in sorted(os.listdir("sudokuji"))
+    os.path.join("domaca-naloga/sudokuji", filename)
+    for filename in sorted(os.listdir("domaca-naloga/sudokuji"))
     if filename.endswith(".sdk")
 ]
 
-# add_benchmarks("ImePriimek", sudokus, "benchmarks.csv", timeout=1, relative_to_baseline=True)
+add_benchmarks("TinMarkon", sudokus, "benchmarks.csv", timeout=1)
