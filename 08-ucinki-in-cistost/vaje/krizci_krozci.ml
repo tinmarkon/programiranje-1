@@ -93,7 +93,9 @@ let set_field (row_i : index) (col_i : index) x grid =
 [*----------------------------------------------------------------------------*)
 
 let is_full_row row = 
-  if row = (Some X, Some O  Some X)
+  let (f1, f2, f3) = row in
+  if f1 != None && f2 != None && f3 != None then true
+  else false 
 
 let is_full_grid grid =
     let (r1, r2, r3) = grid in
@@ -112,9 +114,16 @@ let is_full_grid grid =
  seznam vseh možnosti in preveri seznam.
 [*----------------------------------------------------------------------------*)
 
-let winner_of_triple triple : player option = failwith "DOPOLNI ME"
+let winner_of_triple triple : player option = 
+  match triple with 
+  | (Some X, Some X, Some X) -> Some X
+  | (Some O, Some O, Some O) -> Some O
+  | _ -> None
 
-let winner_of_list triples : player option = failwith "DOPOLNI ME"
+let rec winner_of_list triples : player option = 
+  match triples with
+  | [] -> None
+  | x :: xs -> if winner_of_triple x = None then winner_of_list xs else winner_of_triple x
 
 let winner_of_grid grid =
   (* Pripravimo si vse trojice, kjer bi lahko dosegli tri v vrsto. *)
@@ -135,7 +144,7 @@ let winner_of_grid grid =
  konča bodisi z zmago nekega igralca bodisi z remijem.  
 [*----------------------------------------------------------------------------*)
 
-type result = unit  (* DOPOLNI ME *)
+type result = Win of player | Remi
 
 (*----------------------------------------------------------------------------*]
  Stanje igre predstavimo z vsotnim tipom [state]. Ali je na potezi eden od
@@ -151,7 +160,7 @@ type state =
   | OnTurn of {player : player; grid : grid} 
   | GameOver of {result : result; final_grid : grid}
 
-let initial_state = "DOPOLNI ME"  (* in dodaj anotacijo [: state] *) 
+let initial_state : state = {player = Some X; grid = empty_grid}  (* in dodaj anotacijo [: state] *) 
 
 (*----------------------------------------------------------------------------*]
  Funkcija [other_player] sprejme igralca in vrne njegovega nasprotnika.
@@ -162,7 +171,11 @@ let initial_state = "DOPOLNI ME"  (* in dodaj anotacijo [: state] *)
  in vrne posodobljeno stanje. 
 [*----------------------------------------------------------------------------*)
 
-let other_player player = failwith "DOPOLNI ME"
+let other_player player  = 
+  match player with
+  | Some X -> Some O
+  | Some O -> Some X
+
 
 let place_token player grid (row_i, col_i) : state =
   (* [updated_grid] je mreža, kjer je na mestu določenim z [row_i] in [col_i]

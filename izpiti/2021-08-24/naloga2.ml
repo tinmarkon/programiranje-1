@@ -16,7 +16,7 @@ let vsebuje (x : 'a) (m : ('a, 'b) slovar) = List.mem_assoc x m
 let najdi x (m : ('a, 'b) slovar) = List.assoc_opt x m
 
 (* Doda vrednost v slovar in povozi prejšnjo, če obstaja *)
-let dodaj (k, v) (m : ('a, 'b) slovar) = (k, v) :: List.remove_assoc k m
+let dodaj (k, v) (m : ('a, 'b) slovar)  = (k, v) :: List.remove_assoc k m
 
 (*============================================================================*]
   Matematične izraze predstavimo z dvojiškimi drevesi, v katerih vozlišča predstavljajo 
@@ -47,6 +47,21 @@ let primer =
   Napišite funkcijo `prestej : izraz -> int`, ki vrne število vseh "različnih" 
   spremenljivk v izrazu.
 [*----------------------------------------------------------------------------*)
+let unique_list list = 
+  let rec aux_unique list acc = 
+    match list with
+    | [] -> acc
+    | x :: xs -> if List.mem x acc then aux_unique xs acc else aux_unique xs (x :: acc)
+  in aux_unique list []
+
+
+let prestej (izraz : 'a izraz) = 
+  let rec aux_prestej izraz acc = 
+    match izraz with 
+    | Operacija (levi_izraz, operacija, desni_izraz) -> aux_prestej levi_izraz acc @ aux_prestej desni_izraz acc
+    | Spremenljivka (x) -> x :: acc
+    | Konstanta (y) -> acc
+  in List.length (unique_list (aux_prestej izraz []))
 
 (* b *)
 (*----------------------------------------------------------------------------*]
@@ -54,8 +69,30 @@ Napišite funkcijo `izlusci : 'a izraz -> (string * int) slovar`, ki sprejme izr
 in vrne slovar, ki pove, kolikokrat se posamezna spremenljivka pojavi v izrazu. 
 Vrstni red v slovarju ni pomemben.
 [*----------------------------------------------------------------------------*)
-
+ 
 (* c *)
+let option_slovar = function 
+  | None -> 0
+  | Some x -> x
+
+let seznam_v_slovar (list : 'a list) : ('a, int) slovar =
+  let rec aux_sez list acc = 
+    match list with
+    | [] -> acc
+    | x :: xs -> let previous = option_slovar (najdi x acc) in let acc = dodaj (x, previous + 1) acc in aux_sez xs acc
+  in aux_sez list prazen_slovar
+    
+
+
+let izlusci (izraz : 'a izraz) : (string, int) slovar =
+  let rec aux_izlusci izraz acc = 
+    match izraz with
+    | Operacija (levi_izraz, operacija, desni_izraz) -> aux_izlusci levi_izraz acc @ aux_izlusci desni_izraz acc
+    | Spremenljivka (x) -> x :: acc
+    | Konstanta (y) -> acc
+  in aux_izlusci izraz [] |> seznam_v_slovar
+
+
 (*----------------------------------------------------------------------------*]
   Napišite funkcijo `izracunaj : (string * int) slovar -> int izraz -> option int`, 
   ki sprejme izraz in slovar vrednosti spremenljivk ter poskuša izračunati vrednost 
@@ -65,6 +102,22 @@ Vrstni red v slovarju ni pomemben.
     - : int option = Some (-4)
 [*----------------------------------------------------------------------------*)
 
+let operacije levi operacija desni = 
+  if levi = None || desni = None then None
+  else
+    let Some x = levi and Some y = desni in
+    match operacija with
+    | Plus -> Some (x + y)
+    | Minus -> Some (x - y)
+    | Krat -> Some (x * y)
+    | Deljeno -> if y = 0 then None else Some (x / y)
+
+let rec izracunaj (slovar : (string, int) slovar) (izraz : int izraz) : int option =
+  match izraz with
+  | Operacija (leva_stran, operacija, desni_izraz) -> operacije (izracunaj slovar leva_stran) operacija (izracunaj slovar desni_izraz)
+  | Spremenljivka (x) -> najdi x slovar   
+  | Konstanta (y) -> Some y
+  
 (* c *)
 (*----------------------------------------------------------------------------*]
   Ocenite časovno zahtevnost funkcije `izracunaj` v odvisnosti od velikosti 
