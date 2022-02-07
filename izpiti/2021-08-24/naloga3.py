@@ -28,3 +28,56 @@ piran = [
     [1, 2,  30,  -1, 0],
     [4, 3, -20,  -1, 5],
 ]
+
+
+def pot_najvec_obiskovalcev (matrika): 
+    row, column = len(matrika), len(matrika[0])
+    sledilci = [[None for _ in range(column)] for _ in range(row)]
+    for i in range(row - 1, -1, -1):
+        for j in range(column - 1, -1, -1):
+            if i < (row - 1) and j < (column - 1):
+                sledilci[i][j] = matrika[i][j] + max(sledilci[i + 1][j], sledilci[i][j + 1], sledilci[i + 1][j + 1])
+            elif i < (row - 1): # smo v zadnjem stolpcu
+                sledilci[i][j] = matrika[i][j] + sledilci[i + 1][j]
+            elif j < (column - 1): # smo v zadnji vrstici
+                sledilci[i][j] = matrika[i][j] + sledilci[i][j + 1]
+            else:
+                sledilci[i][j] = matrika[i][j]
+    return sledilci[0][0]
+
+
+def najdrazja_pot_iz_polja(matrika, i, j):
+    row, column = len(matrika), len(matrika[0])
+    if i < (row - 1) and j < (column - 1):
+        cena_in_pot_desno = najdrazja_pot_iz_polja (matrika, i, j + 1)
+        cena_in_pot_dol = najdrazja_pot_iz_polja (matrika, i + 1, j)
+        cena_in_pot_diag = najdrazja_pot_iz_polja (matrika, i + 1, j + 1)
+        max_cena, max_pot = max (cena_in_pot_desno, cena_in_pot_dol, cena_in_pot_diag)
+        return matrika[i][j] + max_cena, [matrika[i][j]] + max_pot
+    elif i < (row - 1): # j = column - 1 -> smo v zadnjem stolpcu #
+        cena_dol, pot_dol = najdrazja_pot_iz_polja (matrika, i + 1, j)
+        return matrika[i][j] + cena_dol, [matrika[i][j]] + pot_dol
+    elif j < (column - 1): # i = row - 1 -> smo v zadnji vrstici #
+        cena_desno, pot_desno = najdrazja_pot_iz_polja (matrika, i, j + 1)
+        return matrika[i][j] + cena_desno, [matrika[i][j]] + pot_desno
+    else: # Pogoj implicira da sta j = column - 1 in i = row - 1 #
+        return matrika[i][j], [matrika[i][j]]
+
+
+# Očitno je da če se lahko vrnemo, potem je smiselno gledati takšna podzaporedja dveh elementov, katerih vsota je največja.
+# Isti par dodamo za njima.
+
+# Ali je možna implementacija direktno v algoritem s pomočjo joker karte ?? 
+
+
+def maksimalni_par(seznam):
+    dvojice = [[(seznam[j], seznam[j + 1], seznam[j] + seznam[j + 1])] for j in range(0, len(seznam)- 1)]
+    return dvojice
+
+def dodaj_max_takoj(seznam):
+    max_levi, max_desni, _ = maksimalni_par (seznam)
+    
+
+delna_resitev = najdrazja_pot_iz_polja (piran, 0 ,0)
+
+maksimalni_par (delna_resitev[1])
